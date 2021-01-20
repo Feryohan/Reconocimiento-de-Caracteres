@@ -11,45 +11,104 @@ namespace Reconocimiento_de_caracteres
     {
         static void Main(string[] args)
         {
-            //Dirección de la imagen
-            string path = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\H\img018-020.png";
-            //imagen
-            Bitmap image = new Bitmap(path, true);
-            string valorPixel;
-            //Obtenemos el numero de pixeles en lo alto y ancho de la imagen
-            Console.WriteLine(image.PhysicalDimension+"\n");
-
-
-            for(int y=0; y<image.Height; y++)
+            int ASCII;
+            LetrasIdeal prueba = new LetrasIdeal();
+            for (ASCII = 65; ASCII < 91; ASCII++)
             {
-                for(int x=0; x<image.Width; x++)
+                char letra = (char)(ASCII);
+                switch (letra)
                 {
-                    //Obtiene el color RGB y el brillo del pixel (x,y)
-                    Color colorRGB = image.GetPixel(x, y);
+                    case 'A':
+                        prueba.aIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'B':
+                        prueba.bIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'C':
+                        prueba.cIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'D':
+                        prueba.dIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'E':
+                        prueba.eIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'F':
+                        prueba.fIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'G':
+                        prueba.gIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'H':
+                        prueba.hIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'I':
+                        prueba.iIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'J':
+                        prueba.jIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'K':
+                        prueba.kIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'L':
+                        prueba.lIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'M':
+                        prueba.mIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'N':
+                        prueba.nIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'O':
+                        prueba.oIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'P':
+                        prueba.pIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'Q':
+                        prueba.qIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'R':
+                        prueba.rIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'S':
+                        prueba.sIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'T':
+                        prueba.tIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'U':
+                        prueba.uIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'V':
+                        prueba.vIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'W':
+                        prueba.wIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'X':
+                        prueba.xIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'Y':
+                        prueba.yIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                    case 'Z':
+                        prueba.zIdeal = LetrasIdeal.asignacionBits(letra);
+                        break;
+                }
+            }
 
-                    int valorRed = colorRGB.R;
-                    int valorGreen = colorRGB.G;
-                    int valorBlue = colorRGB.B;
+            Console.WriteLine("\n\n");
 
-                    //fórmula NTSC: 0.299 ∙ Rojo + 0.587 ∙ Verde + 0.114 ∙ Azul.
-                    double colorGrises = 0.299 * valorRed + 0.587 * valorGreen + 0.114 * valorBlue;
-
-                    //Blanco = 255 = 1
-                    //Negro != 255 = 0
-                    if(colorGrises != 255 & colorGrises < 250)
-                    {
-                        valorPixel = " ";
-                    }
-                    else
-                    {
-                        valorPixel = "█";
-                    }
-
-                    Console.Write(valorPixel);
+            for (int y = 0; y < 23; y++)
+            {
+                for (int x = 0; x < 30; x++)
+                {
+                    Console.Write(prueba.zIdeal[y,x]);
                 }
                 Console.Write("\n");
             }
-
             Console.ReadLine();
         }
     }
