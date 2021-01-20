@@ -1,0 +1,9 @@
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\bin\Debug\Reconocimiento de caracteres.exe.config
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\bin\Debug\Reconocimiento de caracteres.exe
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\bin\Debug\Reconocimiento de caracteres.pdb
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\bin\Debug\System.Drawing.Common.dll
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\obj\Debug\PruebasBitMap.csprojAssemblyReference.cache
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\obj\Debug\PruebasBitMap.csproj.CoreCompileInputs.cache
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\obj\Debug\PruebasBitMap.csproj.CopyComplete
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\obj\Debug\Reconocimiento de caracteres.exe
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\obj\Debug\Reconocimiento de caracteres.pdb
