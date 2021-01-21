@@ -1,0 +1,10 @@
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\bin\Debug\formReconocimientoAZ.exe.config
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\bin\Debug\formReconocimientoAZ.exe
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\bin\Debug\formReconocimientoAZ.pdb
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\obj\Debug\formReconocimientoAZ.csprojAssemblyReference.cache
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\obj\Debug\formReconocimientoAZ.Form1.resources
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\obj\Debug\formReconocimientoAZ.Properties.Resources.resources
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\obj\Debug\formReconocimientoAZ.csproj.GenerateResource.cache
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\obj\Debug\formReconocimientoAZ.csproj.CoreCompileInputs.cache
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\obj\Debug\formReconocimientoAZ.exe
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\obj\Debug\formReconocimientoAZ.pdb

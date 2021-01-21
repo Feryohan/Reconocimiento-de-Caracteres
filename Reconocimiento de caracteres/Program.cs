@@ -12,92 +12,108 @@ namespace Reconocimiento_de_caracteres
         static void Main(string[] args)
         {
             int ASCII;
-            LetrasIdeal prueba = new LetrasIdeal();
+            //Objeto para guardar los valors de 0 y 1 
+            //de las letras que marcan la salida que las neuronas deben tener 
+            matrizCaracteres letrasIdeal = new matrizCaracteres();
+            //Objeto para leer las letras del dataBase 
+            matrizCaracteres letrasDataBase = new matrizCaracteres();
+
+            #region Lectura y registro de las letras ideales 
+            //Lectura de las letras ideales
             for (ASCII = 65; ASCII < 91; ASCII++)
             {
                 char letra = (char)(ASCII);
                 switch (letra)
                 {
                     case 'A':
-                        prueba.aIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.aMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'B':
-                        prueba.bIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.bMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'C':
-                        prueba.cIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.cMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'D':
-                        prueba.dIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.dMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'E':
-                        prueba.eIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.eMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'F':
-                        prueba.fIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.fMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'G':
-                        prueba.gIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.gMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'H':
-                        prueba.hIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.hMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'I':
-                        prueba.iIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.iMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'J':
-                        prueba.jIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.jMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'K':
-                        prueba.kIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.kMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'L':
-                        prueba.lIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.lMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'M':
-                        prueba.mIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.mMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'N':
-                        prueba.nIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.nMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'O':
-                        prueba.oIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.oMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'P':
-                        prueba.pIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.pMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'Q':
-                        prueba.qIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.qMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'R':
-                        prueba.rIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.rMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'S':
-                        prueba.sIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.sMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'T':
-                        prueba.tIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.tMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'U':
-                        prueba.uIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.uMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'V':
-                        prueba.vIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.vMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'W':
-                        prueba.wIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.wMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'X':
-                        prueba.xIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.xMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'Y':
-                        prueba.yIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.yMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                     case 'Z':
-                        prueba.zIdeal = LetrasIdeal.asignacionBits(letra);
+                        letrasIdeal.zMatriz = matrizCaracteres.asignacionBits(letra);
                         break;
                 }
             }
+            #endregion
+
+            #region Lectura de las letras DataBase
+            //Lectura letras B
+            for(int i = 1; i <= letrasDataBase.bNumero; i++)
+            {
+                letrasDataBase.bMatriz = matrizCaracteres.lecturaDataBase(letrasDataBase.bDireccion, i);
+            }
+            #endregion
 
             Console.WriteLine("\n\n");
 
@@ -105,7 +121,7 @@ namespace Reconocimiento_de_caracteres
             {
                 for (int x = 0; x < 30; x++)
                 {
-                    Console.Write(prueba.zIdeal[y,x]);
+                    Console.Write(letrasIdeal.bMatriz[y,x]);
                 }
                 Console.Write("\n");
             }
