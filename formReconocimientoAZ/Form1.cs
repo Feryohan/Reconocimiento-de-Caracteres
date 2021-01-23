@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace formReconocimientoAZ
 {
@@ -22,8 +23,9 @@ namespace formReconocimientoAZ
 
         Bitmap surface;
         Graphics graph;
-        string nombreImagen = "LetraDeEntrada";
-
+        string ruta = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\LetrasUsuario\LetraDeEntrada";
+        string nombreImagen = "Imagen de entrada";
+        int numeroDeImagen = 1;
         public Form1()
         {
             InitializeComponent();
@@ -61,7 +63,21 @@ namespace formReconocimientoAZ
 
         private void button2_Click(object sender, EventArgs e)
         {
-            surface.Save(nombreImagen + ".png");
+            surface.Save(ruta+nombreImagen+Convert.ToString(numeroDeImagen)+".png");
+            Bitmap orig = new Bitmap(ruta + nombreImagen+ Convert.ToString(numeroDeImagen) + ".png");
+            Bitmap bmp = new Bitmap(redimensionarImagen(orig));
+            bmp.Save(ruta+nombreImagen+"30x23.png");
+            numeroDeImagen = numeroDeImagen + 1;
+        }
+
+        public static Bitmap redimensionarImagen (Image imagenEntrada)
+        {
+            //Creamos el bitmap con el ancho y alto
+            var imagenRedimencionada = new Bitmap(30, 23);
+            //La imagen de entrada la convertimos en bitmap
+            Graphics.FromImage(imagenRedimencionada).DrawImage(imagenEntrada, 0, 0, 30, 23);
+            Bitmap imagenFinal = new Bitmap(imagenRedimencionada);
+            return imagenFinal;
         }
     }
 }
