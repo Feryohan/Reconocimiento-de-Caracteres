@@ -13,20 +13,21 @@ using Encog.Neural.Networks.Training.Propagation.Back;
 using Encog.ML.Data;
 using Encog.ML.Data.Basic;
 
+
 namespace Reconocimiento_de_caracteres
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
+
             int ASCII;
             //Objeto para guardar los valors de 0 y 1 
             //de las letras que marcan la salida que las neuronas deben tener 
             matrizCaracteres letrasIdeal = new matrizCaracteres();
             //Objeto para leer las letras del dataBase 
             matrizCaracteres letrasDataBase = new matrizCaracteres();
-            
+
 
             #region Lectura y registro de las letras ideales 
             //Lectura de las letras ideales
@@ -36,197 +37,172 @@ namespace Reconocimiento_de_caracteres
                 switch (letra)
                 {
                     case 'A':
-                        letrasIdeal.aMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.aMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'B':
-                        letrasIdeal.bMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.bMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'C':
-                        letrasIdeal.cMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.cMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'D':
-                        letrasIdeal.dMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.dMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'E':
-                        letrasIdeal.eMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.eMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'F':
-                        letrasIdeal.fMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.fMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'G':
-                        letrasIdeal.gMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.gMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'H':
-                        letrasIdeal.hMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.hMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'I':
-                        letrasIdeal.iMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.iMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'J':
-                        letrasIdeal.jMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.jMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'K':
-                        letrasIdeal.kMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.kMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'L':
-                        letrasIdeal.lMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.lMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'M':
-                        letrasIdeal.mMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.mMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'N':
-                        letrasIdeal.nMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.nMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'O':
-                        letrasIdeal.oMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.oMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'P':
-                        letrasIdeal.pMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.pMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'Q':
-                        letrasIdeal.qMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.qMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'R':
-                        letrasIdeal.rMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.rMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'S':
-                        letrasIdeal.sMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.sMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'T':
-                        letrasIdeal.tMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.tMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'U':
-                        letrasIdeal.uMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.uMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'V':
-                        letrasIdeal.vMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.vMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'W':
-                        letrasIdeal.wMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.wMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'X':
-                        letrasIdeal.xMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.xMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'Y':
-                        letrasIdeal.yMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.yMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                     case 'Z':
-                        letrasIdeal.zMatriz = matrizCaracteres.asignacionBits(letra);
+                        letrasIdeal.zMatriz = matrizCaracteres.lecturaLetrasIdeales(letra);
                         break;
                 }
             }
             #endregion
 
-            
+
             #region Lectura de las letras DataBase
             //Lectura letras B
-            for(int i = 1; i <= letrasDataBase.cNumero; i++)
+            for (int i = 1; i <= letrasDataBase.bNumero; i++)
             {
-                letrasDataBase.cMatriz = matrizCaracteres.lecturaDataBase(letrasDataBase.cDireccion, i);
+                letrasDataBase.bMatriz = matrizCaracteres.lecturaDataBase(letrasDataBase.bDireccion, i);
             }
             #endregion
-
-            Console.WriteLine("\n\n");
-
-            for (int yy = 0; yy < 23; yy++)
-            {
-                for (int xx = 0; xx < 30; xx++)
-                {
-                    Console.Write(letrasDataBase.cMatriz[yy,xx]);
-                }
-                Console.Write("\n");
-            }
             
+            letrasDataBase.similitudConLetraA = matrizCaracteres.redNeuronal(letrasIdeal.aMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraB = matrizCaracteres.redNeuronal(letrasDataBase.bMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraC = matrizCaracteres.redNeuronal(letrasIdeal.cMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraD = matrizCaracteres.redNeuronal(letrasIdeal.dMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraE = matrizCaracteres.redNeuronal(letrasIdeal.eMatriz, letrasIdeal.bMatriz);
 
-            //data set sum
-            double[][] x =
+            letrasDataBase.similitudConLetraF = matrizCaracteres.redNeuronal(letrasIdeal.fMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraG = matrizCaracteres.redNeuronal(letrasIdeal.gMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraH = matrizCaracteres.redNeuronal(letrasIdeal.hMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraI = matrizCaracteres.redNeuronal(letrasIdeal.iMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraJ = matrizCaracteres.redNeuronal(letrasIdeal.jMatriz, letrasIdeal.bMatriz);
+
+            letrasDataBase.similitudConLetraK = matrizCaracteres.redNeuronal(letrasIdeal.kMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraL = matrizCaracteres.redNeuronal(letrasIdeal.lMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraM = matrizCaracteres.redNeuronal(letrasIdeal.mMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraN = matrizCaracteres.redNeuronal(letrasIdeal.nMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraO = matrizCaracteres.redNeuronal(letrasIdeal.oMatriz, letrasIdeal.bMatriz);
+
+            letrasDataBase.similitudConLetraP = matrizCaracteres.redNeuronal(letrasIdeal.pMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraQ = matrizCaracteres.redNeuronal(letrasIdeal.qMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraR = matrizCaracteres.redNeuronal(letrasIdeal.rMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraS = matrizCaracteres.redNeuronal(letrasIdeal.sMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraT = matrizCaracteres.redNeuronal(letrasIdeal.tMatriz, letrasIdeal.bMatriz);
+
+            letrasDataBase.similitudConLetraU = matrizCaracteres.redNeuronal(letrasIdeal.uMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraV = matrizCaracteres.redNeuronal(letrasIdeal.vMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraW = matrizCaracteres.redNeuronal(letrasIdeal.wMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraX = matrizCaracteres.redNeuronal(letrasIdeal.xMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraY = matrizCaracteres.redNeuronal(letrasIdeal.yMatriz, letrasIdeal.bMatriz);
+            letrasDataBase.similitudConLetraZ = matrizCaracteres.redNeuronal(letrasIdeal.zMatriz, letrasIdeal.bMatriz);
+
+
+           List<Letras> listaLetras = new List<Letras>()
             {
-                new double[]{letrasDataBase.cMatriz[0,0],letrasDataBase.cMatriz[0,1],letrasDataBase.cMatriz[0,2],letrasDataBase.cMatriz[0,3],letrasDataBase.cMatriz[0,4],letrasDataBase.cMatriz[0,5],letrasDataBase.cMatriz[0,6],letrasDataBase.cMatriz[0,7],letrasDataBase.cMatriz[0,8],letrasDataBase.cMatriz[0,9],letrasDataBase.cMatriz[0,10],letrasDataBase.cMatriz[0,11],letrasDataBase.cMatriz[0,12],letrasDataBase.cMatriz[0,13],letrasDataBase.cMatriz[0,14],letrasDataBase.cMatriz[0,15],letrasDataBase.cMatriz[0,16],letrasDataBase.cMatriz[0,17],letrasDataBase.cMatriz[0,18],letrasDataBase.cMatriz[0,19],letrasDataBase.cMatriz[0,20],letrasDataBase.cMatriz[0,21],letrasDataBase.cMatriz[0,22],letrasDataBase.cMatriz[0,23],letrasDataBase.cMatriz[0,24],letrasDataBase.cMatriz[0,25],letrasDataBase.cMatriz[0,26],letrasDataBase.cMatriz[0,27],letrasDataBase.cMatriz[0,28],letrasDataBase.cMatriz[0,29]},
-                new double[]{letrasDataBase.cMatriz[1,0],letrasDataBase.cMatriz[1,1],letrasDataBase.cMatriz[1,2],letrasDataBase.cMatriz[1,3],letrasDataBase.cMatriz[1,4],letrasDataBase.cMatriz[1,5],letrasDataBase.cMatriz[1,6],letrasDataBase.cMatriz[1,7],letrasDataBase.cMatriz[1,8],letrasDataBase.cMatriz[1,9],letrasDataBase.cMatriz[1,10],letrasDataBase.cMatriz[1,11],letrasDataBase.cMatriz[1,12],letrasDataBase.cMatriz[1,13],letrasDataBase.cMatriz[1,14],letrasDataBase.cMatriz[1,15],letrasDataBase.cMatriz[1,16],letrasDataBase.cMatriz[1,17],letrasDataBase.cMatriz[1,18],letrasDataBase.cMatriz[1,19],letrasDataBase.cMatriz[1,20],letrasDataBase.cMatriz[1,21],letrasDataBase.cMatriz[1,22],letrasDataBase.cMatriz[1,23],letrasDataBase.cMatriz[1,24],letrasDataBase.cMatriz[1,25],letrasDataBase.cMatriz[1,26],letrasDataBase.cMatriz[1,27],letrasDataBase.cMatriz[1,28],letrasDataBase.cMatriz[1,29]},
-                new double[]{letrasDataBase.cMatriz[2,0],letrasDataBase.cMatriz[2,1],letrasDataBase.cMatriz[2,2],letrasDataBase.cMatriz[2,3],letrasDataBase.cMatriz[2,4],letrasDataBase.cMatriz[2,5],letrasDataBase.cMatriz[2,6],letrasDataBase.cMatriz[2,7],letrasDataBase.cMatriz[2,8],letrasDataBase.cMatriz[2,9],letrasDataBase.cMatriz[2,10],letrasDataBase.cMatriz[2,11],letrasDataBase.cMatriz[2,12],letrasDataBase.cMatriz[2,13],letrasDataBase.cMatriz[2,14],letrasDataBase.cMatriz[2,15],letrasDataBase.cMatriz[2,16],letrasDataBase.cMatriz[2,17],letrasDataBase.cMatriz[2,18],letrasDataBase.cMatriz[2,19],letrasDataBase.cMatriz[2,20],letrasDataBase.cMatriz[2,21],letrasDataBase.cMatriz[2,22],letrasDataBase.cMatriz[2,23],letrasDataBase.cMatriz[2,24],letrasDataBase.cMatriz[2,25],letrasDataBase.cMatriz[2,26],letrasDataBase.cMatriz[2,27],letrasDataBase.cMatriz[2,28],letrasDataBase.cMatriz[2,29]},
-                new double[]{letrasDataBase.cMatriz[3,0],letrasDataBase.cMatriz[3,1],letrasDataBase.cMatriz[3,2],letrasDataBase.cMatriz[3,3],letrasDataBase.cMatriz[3,4],letrasDataBase.cMatriz[3,5],letrasDataBase.cMatriz[3,6],letrasDataBase.cMatriz[3,7],letrasDataBase.cMatriz[3,8],letrasDataBase.cMatriz[3,9],letrasDataBase.cMatriz[3,10],letrasDataBase.cMatriz[3,11],letrasDataBase.cMatriz[3,12],letrasDataBase.cMatriz[3,13],letrasDataBase.cMatriz[3,14],letrasDataBase.cMatriz[3,15],letrasDataBase.cMatriz[3,16],letrasDataBase.cMatriz[3,17],letrasDataBase.cMatriz[3,18],letrasDataBase.cMatriz[3,19],letrasDataBase.cMatriz[3,20],letrasDataBase.cMatriz[3,21],letrasDataBase.cMatriz[3,22],letrasDataBase.cMatriz[3,23],letrasDataBase.cMatriz[3,24],letrasDataBase.cMatriz[3,25],letrasDataBase.cMatriz[3,26],letrasDataBase.cMatriz[3,27],letrasDataBase.cMatriz[3,28],letrasDataBase.cMatriz[3,29]},
-                new double[]{letrasDataBase.cMatriz[4,0],letrasDataBase.cMatriz[4,1],letrasDataBase.cMatriz[4,2],letrasDataBase.cMatriz[4,3],letrasDataBase.cMatriz[4,4],letrasDataBase.cMatriz[4,5],letrasDataBase.cMatriz[4,6],letrasDataBase.cMatriz[4,7],letrasDataBase.cMatriz[4,8],letrasDataBase.cMatriz[4,9],letrasDataBase.cMatriz[4,10],letrasDataBase.cMatriz[4,11],letrasDataBase.cMatriz[4,12],letrasDataBase.cMatriz[4,13],letrasDataBase.cMatriz[4,14],letrasDataBase.cMatriz[4,15],letrasDataBase.cMatriz[4,16],letrasDataBase.cMatriz[4,17],letrasDataBase.cMatriz[4,18],letrasDataBase.cMatriz[4,19],letrasDataBase.cMatriz[4,20],letrasDataBase.cMatriz[4,21],letrasDataBase.cMatriz[4,22],letrasDataBase.cMatriz[4,23],letrasDataBase.cMatriz[4,24],letrasDataBase.cMatriz[4,25],letrasDataBase.cMatriz[4,26],letrasDataBase.cMatriz[4,27],letrasDataBase.cMatriz[4,28],letrasDataBase.cMatriz[4,29]},
-                new double[]{letrasDataBase.cMatriz[5,0],letrasDataBase.cMatriz[5,1],letrasDataBase.cMatriz[5,2],letrasDataBase.cMatriz[5,3],letrasDataBase.cMatriz[5,4],letrasDataBase.cMatriz[5,5],letrasDataBase.cMatriz[5,6],letrasDataBase.cMatriz[5,7],letrasDataBase.cMatriz[5,8],letrasDataBase.cMatriz[5,9],letrasDataBase.cMatriz[5,10],letrasDataBase.cMatriz[5,11],letrasDataBase.cMatriz[5,12],letrasDataBase.cMatriz[5,13],letrasDataBase.cMatriz[5,14],letrasDataBase.cMatriz[5,15],letrasDataBase.cMatriz[5,16],letrasDataBase.cMatriz[5,17],letrasDataBase.cMatriz[5,18],letrasDataBase.cMatriz[5,19],letrasDataBase.cMatriz[5,20],letrasDataBase.cMatriz[5,21],letrasDataBase.cMatriz[5,22],letrasDataBase.cMatriz[5,23],letrasDataBase.cMatriz[5,24],letrasDataBase.cMatriz[5,25],letrasDataBase.cMatriz[5,26],letrasDataBase.cMatriz[5,27],letrasDataBase.cMatriz[5,28],letrasDataBase.cMatriz[5,29]},
-                new double[]{letrasDataBase.cMatriz[6,0],letrasDataBase.cMatriz[6,1],letrasDataBase.cMatriz[6,2],letrasDataBase.cMatriz[6,3],letrasDataBase.cMatriz[6,4],letrasDataBase.cMatriz[6,5],letrasDataBase.cMatriz[6,6],letrasDataBase.cMatriz[6,7],letrasDataBase.cMatriz[6,8],letrasDataBase.cMatriz[6,9],letrasDataBase.cMatriz[6,10],letrasDataBase.cMatriz[6,11],letrasDataBase.cMatriz[6,12],letrasDataBase.cMatriz[6,13],letrasDataBase.cMatriz[6,14],letrasDataBase.cMatriz[6,15],letrasDataBase.cMatriz[6,16],letrasDataBase.cMatriz[6,17],letrasDataBase.cMatriz[6,18],letrasDataBase.cMatriz[6,19],letrasDataBase.cMatriz[6,20],letrasDataBase.cMatriz[6,21],letrasDataBase.cMatriz[6,22],letrasDataBase.cMatriz[6,23],letrasDataBase.cMatriz[6,24],letrasDataBase.cMatriz[6,25],letrasDataBase.cMatriz[6,26],letrasDataBase.cMatriz[6,27],letrasDataBase.cMatriz[6,28],letrasDataBase.cMatriz[6,29]},
-                new double[]{letrasDataBase.cMatriz[7,0],letrasDataBase.cMatriz[7,1],letrasDataBase.cMatriz[7,2],letrasDataBase.cMatriz[7,3],letrasDataBase.cMatriz[7,4],letrasDataBase.cMatriz[7,5],letrasDataBase.cMatriz[7,6],letrasDataBase.cMatriz[7,7],letrasDataBase.cMatriz[7,8],letrasDataBase.cMatriz[7,9],letrasDataBase.cMatriz[7,10],letrasDataBase.cMatriz[7,11],letrasDataBase.cMatriz[7,12],letrasDataBase.cMatriz[7,13],letrasDataBase.cMatriz[7,14],letrasDataBase.cMatriz[7,15],letrasDataBase.cMatriz[7,16],letrasDataBase.cMatriz[7,17],letrasDataBase.cMatriz[7,18],letrasDataBase.cMatriz[7,19],letrasDataBase.cMatriz[7,20],letrasDataBase.cMatriz[7,21],letrasDataBase.cMatriz[7,22],letrasDataBase.cMatriz[7,23],letrasDataBase.cMatriz[7,24],letrasDataBase.cMatriz[7,25],letrasDataBase.cMatriz[7,26],letrasDataBase.cMatriz[7,27],letrasDataBase.cMatriz[7,28],letrasDataBase.cMatriz[7,29]},
-                new double[]{letrasDataBase.cMatriz[8,0],letrasDataBase.cMatriz[8,1],letrasDataBase.cMatriz[8,2],letrasDataBase.cMatriz[8,3],letrasDataBase.cMatriz[8,4],letrasDataBase.cMatriz[8,5],letrasDataBase.cMatriz[8,6],letrasDataBase.cMatriz[8,7],letrasDataBase.cMatriz[8,8],letrasDataBase.cMatriz[8,9],letrasDataBase.cMatriz[8,10],letrasDataBase.cMatriz[8,11],letrasDataBase.cMatriz[8,12],letrasDataBase.cMatriz[8,13],letrasDataBase.cMatriz[8,14],letrasDataBase.cMatriz[8,15],letrasDataBase.cMatriz[8,16],letrasDataBase.cMatriz[8,17],letrasDataBase.cMatriz[8,18],letrasDataBase.cMatriz[8,19],letrasDataBase.cMatriz[8,20],letrasDataBase.cMatriz[8,21],letrasDataBase.cMatriz[8,22],letrasDataBase.cMatriz[8,23],letrasDataBase.cMatriz[8,24],letrasDataBase.cMatriz[8,25],letrasDataBase.cMatriz[8,26],letrasDataBase.cMatriz[8,27],letrasDataBase.cMatriz[8,28],letrasDataBase.cMatriz[8,29]},
-                new double[]{letrasDataBase.cMatriz[9,0],letrasDataBase.cMatriz[9,1],letrasDataBase.cMatriz[9,2],letrasDataBase.cMatriz[9,3],letrasDataBase.cMatriz[9,4],letrasDataBase.cMatriz[9,5],letrasDataBase.cMatriz[9,6],letrasDataBase.cMatriz[9,7],letrasDataBase.cMatriz[9,8],letrasDataBase.cMatriz[9,9],letrasDataBase.cMatriz[9,10],letrasDataBase.cMatriz[9,11],letrasDataBase.cMatriz[9,12],letrasDataBase.cMatriz[9,13],letrasDataBase.cMatriz[9,14],letrasDataBase.cMatriz[9,15],letrasDataBase.cMatriz[9,16],letrasDataBase.cMatriz[9,17],letrasDataBase.cMatriz[9,18],letrasDataBase.cMatriz[9,19],letrasDataBase.cMatriz[9,20],letrasDataBase.cMatriz[9,21],letrasDataBase.cMatriz[9,22],letrasDataBase.cMatriz[9,23],letrasDataBase.cMatriz[9,24],letrasDataBase.cMatriz[9,25],letrasDataBase.cMatriz[9,26],letrasDataBase.cMatriz[9,27],letrasDataBase.cMatriz[9,28],letrasDataBase.cMatriz[9,29]},
-                new double[]{letrasDataBase.cMatriz[10,0],letrasDataBase.cMatriz[10,1],letrasDataBase.cMatriz[10,2],letrasDataBase.cMatriz[10,3],letrasDataBase.cMatriz[10,4],letrasDataBase.cMatriz[10,5],letrasDataBase.cMatriz[10,6],letrasDataBase.cMatriz[10,7],letrasDataBase.cMatriz[10,8],letrasDataBase.cMatriz[10,9],letrasDataBase.cMatriz[10,10],letrasDataBase.cMatriz[10,11],letrasDataBase.cMatriz[10,12],letrasDataBase.cMatriz[10,13],letrasDataBase.cMatriz[10,14],letrasDataBase.cMatriz[10,15],letrasDataBase.cMatriz[10,16],letrasDataBase.cMatriz[10,17],letrasDataBase.cMatriz[10,18],letrasDataBase.cMatriz[10,19],letrasDataBase.cMatriz[10,20],letrasDataBase.cMatriz[10,21],letrasDataBase.cMatriz[10,22],letrasDataBase.cMatriz[10,23],letrasDataBase.cMatriz[10,24],letrasDataBase.cMatriz[10,25],letrasDataBase.cMatriz[10,26],letrasDataBase.cMatriz[10,27],letrasDataBase.cMatriz[10,28],letrasDataBase.cMatriz[10,29]},
-                new double[]{letrasDataBase.cMatriz[11,0],letrasDataBase.cMatriz[11,1],letrasDataBase.cMatriz[11,2],letrasDataBase.cMatriz[11,3],letrasDataBase.cMatriz[11,4],letrasDataBase.cMatriz[11,5],letrasDataBase.cMatriz[11,6],letrasDataBase.cMatriz[11,7],letrasDataBase.cMatriz[11,8],letrasDataBase.cMatriz[11,9],letrasDataBase.cMatriz[11,10],letrasDataBase.cMatriz[11,11],letrasDataBase.cMatriz[11,12],letrasDataBase.cMatriz[11,13],letrasDataBase.cMatriz[11,14],letrasDataBase.cMatriz[11,15],letrasDataBase.cMatriz[11,16],letrasDataBase.cMatriz[11,17],letrasDataBase.cMatriz[11,18],letrasDataBase.cMatriz[11,19],letrasDataBase.cMatriz[11,20],letrasDataBase.cMatriz[11,21],letrasDataBase.cMatriz[11,22],letrasDataBase.cMatriz[11,23],letrasDataBase.cMatriz[11,24],letrasDataBase.cMatriz[11,25],letrasDataBase.cMatriz[11,26],letrasDataBase.cMatriz[11,27],letrasDataBase.cMatriz[11,28],letrasDataBase.cMatriz[11,29]},
-                new double[]{letrasDataBase.cMatriz[12,0],letrasDataBase.cMatriz[12,1],letrasDataBase.cMatriz[12,2],letrasDataBase.cMatriz[12,3],letrasDataBase.cMatriz[12,4],letrasDataBase.cMatriz[12,5],letrasDataBase.cMatriz[12,6],letrasDataBase.cMatriz[12,7],letrasDataBase.cMatriz[12,8],letrasDataBase.cMatriz[12,9],letrasDataBase.cMatriz[12,10],letrasDataBase.cMatriz[12,11],letrasDataBase.cMatriz[12,12],letrasDataBase.cMatriz[12,13],letrasDataBase.cMatriz[12,14],letrasDataBase.cMatriz[12,15],letrasDataBase.cMatriz[12,16],letrasDataBase.cMatriz[12,17],letrasDataBase.cMatriz[12,18],letrasDataBase.cMatriz[12,19],letrasDataBase.cMatriz[12,20],letrasDataBase.cMatriz[12,21],letrasDataBase.cMatriz[12,22],letrasDataBase.cMatriz[12,23],letrasDataBase.cMatriz[12,24],letrasDataBase.cMatriz[12,25],letrasDataBase.cMatriz[12,26],letrasDataBase.cMatriz[12,27],letrasDataBase.cMatriz[12,28],letrasDataBase.cMatriz[12,29]},
-                new double[]{letrasDataBase.cMatriz[13,0],letrasDataBase.cMatriz[13,1],letrasDataBase.cMatriz[13,2],letrasDataBase.cMatriz[13,3],letrasDataBase.cMatriz[13,4],letrasDataBase.cMatriz[13,5],letrasDataBase.cMatriz[13,6],letrasDataBase.cMatriz[13,7],letrasDataBase.cMatriz[13,8],letrasDataBase.cMatriz[13,9],letrasDataBase.cMatriz[13,10],letrasDataBase.cMatriz[13,11],letrasDataBase.cMatriz[13,12],letrasDataBase.cMatriz[13,13],letrasDataBase.cMatriz[13,14],letrasDataBase.cMatriz[13,15],letrasDataBase.cMatriz[13,16],letrasDataBase.cMatriz[13,17],letrasDataBase.cMatriz[13,18],letrasDataBase.cMatriz[13,19],letrasDataBase.cMatriz[13,20],letrasDataBase.cMatriz[13,21],letrasDataBase.cMatriz[13,22],letrasDataBase.cMatriz[13,23],letrasDataBase.cMatriz[13,24],letrasDataBase.cMatriz[13,25],letrasDataBase.cMatriz[13,26],letrasDataBase.cMatriz[13,27],letrasDataBase.cMatriz[13,28],letrasDataBase.cMatriz[13,29]},
-                new double[]{letrasDataBase.cMatriz[14,0],letrasDataBase.cMatriz[14,1],letrasDataBase.cMatriz[14,2],letrasDataBase.cMatriz[14,3],letrasDataBase.cMatriz[14,4],letrasDataBase.cMatriz[14,5],letrasDataBase.cMatriz[14,6],letrasDataBase.cMatriz[14,7],letrasDataBase.cMatriz[14,8],letrasDataBase.cMatriz[14,9],letrasDataBase.cMatriz[14,10],letrasDataBase.cMatriz[14,11],letrasDataBase.cMatriz[14,12],letrasDataBase.cMatriz[14,13],letrasDataBase.cMatriz[14,14],letrasDataBase.cMatriz[14,15],letrasDataBase.cMatriz[14,16],letrasDataBase.cMatriz[14,17],letrasDataBase.cMatriz[14,18],letrasDataBase.cMatriz[14,19],letrasDataBase.cMatriz[14,20],letrasDataBase.cMatriz[14,21],letrasDataBase.cMatriz[14,22],letrasDataBase.cMatriz[14,23],letrasDataBase.cMatriz[14,24],letrasDataBase.cMatriz[14,25],letrasDataBase.cMatriz[14,26],letrasDataBase.cMatriz[14,27],letrasDataBase.cMatriz[14,28],letrasDataBase.cMatriz[14,29]},
-                new double[]{letrasDataBase.cMatriz[15,0],letrasDataBase.cMatriz[15,1],letrasDataBase.cMatriz[15,2],letrasDataBase.cMatriz[15,3],letrasDataBase.cMatriz[15,4],letrasDataBase.cMatriz[15,5],letrasDataBase.cMatriz[15,6],letrasDataBase.cMatriz[15,7],letrasDataBase.cMatriz[15,8],letrasDataBase.cMatriz[15,9],letrasDataBase.cMatriz[15,10],letrasDataBase.cMatriz[15,11],letrasDataBase.cMatriz[15,12],letrasDataBase.cMatriz[15,13],letrasDataBase.cMatriz[15,14],letrasDataBase.cMatriz[15,15],letrasDataBase.cMatriz[15,16],letrasDataBase.cMatriz[15,17],letrasDataBase.cMatriz[15,18],letrasDataBase.cMatriz[15,19],letrasDataBase.cMatriz[15,20],letrasDataBase.cMatriz[15,21],letrasDataBase.cMatriz[15,22],letrasDataBase.cMatriz[15,23],letrasDataBase.cMatriz[15,24],letrasDataBase.cMatriz[15,25],letrasDataBase.cMatriz[15,26],letrasDataBase.cMatriz[15,27],letrasDataBase.cMatriz[15,28],letrasDataBase.cMatriz[15,29]},
-                new double[]{letrasDataBase.cMatriz[16,0],letrasDataBase.cMatriz[16,1],letrasDataBase.cMatriz[16,2],letrasDataBase.cMatriz[16,3],letrasDataBase.cMatriz[16,4],letrasDataBase.cMatriz[16,5],letrasDataBase.cMatriz[16,6],letrasDataBase.cMatriz[16,7],letrasDataBase.cMatriz[16,8],letrasDataBase.cMatriz[16,9],letrasDataBase.cMatriz[16,10],letrasDataBase.cMatriz[16,11],letrasDataBase.cMatriz[16,12],letrasDataBase.cMatriz[16,13],letrasDataBase.cMatriz[16,14],letrasDataBase.cMatriz[16,15],letrasDataBase.cMatriz[16,16],letrasDataBase.cMatriz[16,17],letrasDataBase.cMatriz[16,18],letrasDataBase.cMatriz[16,19],letrasDataBase.cMatriz[16,20],letrasDataBase.cMatriz[16,21],letrasDataBase.cMatriz[16,22],letrasDataBase.cMatriz[16,23],letrasDataBase.cMatriz[16,24],letrasDataBase.cMatriz[16,25],letrasDataBase.cMatriz[16,26],letrasDataBase.cMatriz[16,27],letrasDataBase.cMatriz[16,28],letrasDataBase.cMatriz[16,29]},
-                new double[]{letrasDataBase.cMatriz[17,0],letrasDataBase.cMatriz[17,1],letrasDataBase.cMatriz[17,2],letrasDataBase.cMatriz[17,3],letrasDataBase.cMatriz[17,4],letrasDataBase.cMatriz[17,5],letrasDataBase.cMatriz[17,6],letrasDataBase.cMatriz[17,7],letrasDataBase.cMatriz[17,8],letrasDataBase.cMatriz[17,9],letrasDataBase.cMatriz[17,10],letrasDataBase.cMatriz[17,11],letrasDataBase.cMatriz[17,12],letrasDataBase.cMatriz[17,13],letrasDataBase.cMatriz[17,14],letrasDataBase.cMatriz[17,15],letrasDataBase.cMatriz[17,16],letrasDataBase.cMatriz[17,17],letrasDataBase.cMatriz[17,18],letrasDataBase.cMatriz[17,19],letrasDataBase.cMatriz[17,20],letrasDataBase.cMatriz[17,21],letrasDataBase.cMatriz[17,22],letrasDataBase.cMatriz[17,23],letrasDataBase.cMatriz[17,24],letrasDataBase.cMatriz[17,25],letrasDataBase.cMatriz[17,26],letrasDataBase.cMatriz[17,27],letrasDataBase.cMatriz[17,28],letrasDataBase.cMatriz[17,29]},
-                new double[]{letrasDataBase.cMatriz[18,0],letrasDataBase.cMatriz[18,1],letrasDataBase.cMatriz[18,2],letrasDataBase.cMatriz[18,3],letrasDataBase.cMatriz[18,4],letrasDataBase.cMatriz[18,5],letrasDataBase.cMatriz[18,6],letrasDataBase.cMatriz[18,7],letrasDataBase.cMatriz[18,8],letrasDataBase.cMatriz[18,9],letrasDataBase.cMatriz[18,10],letrasDataBase.cMatriz[18,11],letrasDataBase.cMatriz[18,12],letrasDataBase.cMatriz[18,13],letrasDataBase.cMatriz[18,14],letrasDataBase.cMatriz[18,15],letrasDataBase.cMatriz[18,16],letrasDataBase.cMatriz[18,17],letrasDataBase.cMatriz[18,18],letrasDataBase.cMatriz[18,19],letrasDataBase.cMatriz[18,20],letrasDataBase.cMatriz[18,21],letrasDataBase.cMatriz[18,22],letrasDataBase.cMatriz[18,23],letrasDataBase.cMatriz[18,24],letrasDataBase.cMatriz[18,25],letrasDataBase.cMatriz[18,26],letrasDataBase.cMatriz[18,27],letrasDataBase.cMatriz[18,28],letrasDataBase.cMatriz[18,29]},
-                new double[]{letrasDataBase.cMatriz[19,0],letrasDataBase.cMatriz[19,1],letrasDataBase.cMatriz[19,2],letrasDataBase.cMatriz[19,3],letrasDataBase.cMatriz[19,4],letrasDataBase.cMatriz[19,5],letrasDataBase.cMatriz[19,6],letrasDataBase.cMatriz[19,7],letrasDataBase.cMatriz[19,8],letrasDataBase.cMatriz[19,9],letrasDataBase.cMatriz[19,10],letrasDataBase.cMatriz[19,11],letrasDataBase.cMatriz[19,12],letrasDataBase.cMatriz[19,13],letrasDataBase.cMatriz[19,14],letrasDataBase.cMatriz[19,15],letrasDataBase.cMatriz[19,16],letrasDataBase.cMatriz[19,17],letrasDataBase.cMatriz[19,18],letrasDataBase.cMatriz[19,19],letrasDataBase.cMatriz[19,20],letrasDataBase.cMatriz[19,21],letrasDataBase.cMatriz[19,22],letrasDataBase.cMatriz[19,23],letrasDataBase.cMatriz[19,24],letrasDataBase.cMatriz[19,25],letrasDataBase.cMatriz[19,26],letrasDataBase.cMatriz[19,27],letrasDataBase.cMatriz[19,28],letrasDataBase.cMatriz[19,29]},
-                new double[]{letrasDataBase.cMatriz[20,0],letrasDataBase.cMatriz[20,1],letrasDataBase.cMatriz[20,2],letrasDataBase.cMatriz[20,3],letrasDataBase.cMatriz[20,4],letrasDataBase.cMatriz[20,5],letrasDataBase.cMatriz[20,6],letrasDataBase.cMatriz[20,7],letrasDataBase.cMatriz[20,8],letrasDataBase.cMatriz[20,9],letrasDataBase.cMatriz[20,10],letrasDataBase.cMatriz[20,11],letrasDataBase.cMatriz[20,12],letrasDataBase.cMatriz[20,13],letrasDataBase.cMatriz[20,14],letrasDataBase.cMatriz[20,15],letrasDataBase.cMatriz[20,16],letrasDataBase.cMatriz[20,17],letrasDataBase.cMatriz[20,18],letrasDataBase.cMatriz[20,19],letrasDataBase.cMatriz[20,20],letrasDataBase.cMatriz[20,21],letrasDataBase.cMatriz[20,22],letrasDataBase.cMatriz[20,23],letrasDataBase.cMatriz[20,24],letrasDataBase.cMatriz[20,25],letrasDataBase.cMatriz[20,26],letrasDataBase.cMatriz[20,27],letrasDataBase.cMatriz[20,28],letrasDataBase.cMatriz[20,29]},
-                new double[]{letrasDataBase.cMatriz[21,0],letrasDataBase.cMatriz[21,1],letrasDataBase.cMatriz[21,2],letrasDataBase.cMatriz[21,3],letrasDataBase.cMatriz[21,4],letrasDataBase.cMatriz[21,5],letrasDataBase.cMatriz[21,6],letrasDataBase.cMatriz[21,7],letrasDataBase.cMatriz[21,8],letrasDataBase.cMatriz[21,9],letrasDataBase.cMatriz[21,10],letrasDataBase.cMatriz[21,11],letrasDataBase.cMatriz[21,12],letrasDataBase.cMatriz[21,13],letrasDataBase.cMatriz[21,14],letrasDataBase.cMatriz[21,15],letrasDataBase.cMatriz[21,16],letrasDataBase.cMatriz[21,17],letrasDataBase.cMatriz[21,18],letrasDataBase.cMatriz[21,19],letrasDataBase.cMatriz[21,20],letrasDataBase.cMatriz[21,21],letrasDataBase.cMatriz[21,22],letrasDataBase.cMatriz[21,23],letrasDataBase.cMatriz[21,24],letrasDataBase.cMatriz[21,25],letrasDataBase.cMatriz[21,26],letrasDataBase.cMatriz[21,27],letrasDataBase.cMatriz[21,28],letrasDataBase.cMatriz[21,29]},
-                new double[]{letrasDataBase.cMatriz[22,0],letrasDataBase.cMatriz[22,1],letrasDataBase.cMatriz[22,2],letrasDataBase.cMatriz[22,3],letrasDataBase.cMatriz[22,4],letrasDataBase.cMatriz[22,5],letrasDataBase.cMatriz[22,6],letrasDataBase.cMatriz[22,7],letrasDataBase.cMatriz[22,8],letrasDataBase.cMatriz[22,9],letrasDataBase.cMatriz[22,10],letrasDataBase.cMatriz[22,11],letrasDataBase.cMatriz[22,12],letrasDataBase.cMatriz[22,13],letrasDataBase.cMatriz[22,14],letrasDataBase.cMatriz[22,15],letrasDataBase.cMatriz[22,16],letrasDataBase.cMatriz[22,17],letrasDataBase.cMatriz[22,18],letrasDataBase.cMatriz[22,19],letrasDataBase.cMatriz[22,20],letrasDataBase.cMatriz[22,21],letrasDataBase.cMatriz[22,22],letrasDataBase.cMatriz[22,23],letrasDataBase.cMatriz[22,24],letrasDataBase.cMatriz[22,25],letrasDataBase.cMatriz[22,26],letrasDataBase.cMatriz[22,27],letrasDataBase.cMatriz[22,28],letrasDataBase.cMatriz[22,29]}
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraA, letra = "A" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraB, letra = "B" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraC, letra = "C" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraD, letra = "D" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraE, letra = "E" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraF, letra = "F" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraG, letra = "G" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraH, letra = "H" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraI, letra = "I" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraJ, letra = "J" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraK, letra = "K" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraL, letra = "L" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraM, letra = "M" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraN, letra = "N" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraO, letra = "O" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraP, letra = "P" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraQ, letra = "Q" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraR, letra = "R" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraS, letra = "S" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraT, letra = "T" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraU, letra = "U" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraV, letra = "V" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraW, letra = "W" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraX, letra = "X" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraY, letra = "Y" },
+                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraZ, letra = "Z" },
             };
             
-            double[][] y =
+            List<Letras> letrasOrdenadas = listaLetras.OrderByDescending(numero => numero.coincidenciaConLetra).ToList();
+            foreach (Letras numero in letrasOrdenadas)
             {
-                new double[]{letrasIdeal.bMatriz[0,0],letrasIdeal.bMatriz[0,1],letrasIdeal.bMatriz[0,2],letrasIdeal.bMatriz[0,3],letrasIdeal.bMatriz[0,4],letrasIdeal.bMatriz[0,5],letrasIdeal.bMatriz[0,6],letrasIdeal.bMatriz[0,7],letrasIdeal.bMatriz[0,8],letrasIdeal.bMatriz[0,9],letrasIdeal.bMatriz[0,10],letrasIdeal.bMatriz[0,11],letrasIdeal.bMatriz[0,12],letrasIdeal.bMatriz[0,13],letrasIdeal.bMatriz[0,14],letrasIdeal.bMatriz[0,15],letrasIdeal.bMatriz[0,16],letrasIdeal.bMatriz[0,17],letrasIdeal.bMatriz[0,18],letrasIdeal.bMatriz[0,19],letrasIdeal.bMatriz[0,20],letrasIdeal.bMatriz[0,21],letrasIdeal.bMatriz[0,22],letrasIdeal.bMatriz[0,23],letrasIdeal.bMatriz[0,24],letrasIdeal.bMatriz[0,25],letrasIdeal.bMatriz[0,26],letrasIdeal.bMatriz[0,27],letrasIdeal.bMatriz[0,28],letrasIdeal.bMatriz[0,29]},
-                new double[]{letrasIdeal.bMatriz[1,0],letrasIdeal.bMatriz[1,1],letrasIdeal.bMatriz[1,2],letrasIdeal.bMatriz[1,3],letrasIdeal.bMatriz[1,4],letrasIdeal.bMatriz[1,5],letrasIdeal.bMatriz[1,6],letrasIdeal.bMatriz[1,7],letrasIdeal.bMatriz[1,8],letrasIdeal.bMatriz[1,9],letrasIdeal.bMatriz[1,10],letrasIdeal.bMatriz[1,11],letrasIdeal.bMatriz[1,12],letrasIdeal.bMatriz[1,13],letrasIdeal.bMatriz[1,14],letrasIdeal.bMatriz[1,15],letrasIdeal.bMatriz[1,16],letrasIdeal.bMatriz[1,17],letrasIdeal.bMatriz[1,18],letrasIdeal.bMatriz[1,19],letrasIdeal.bMatriz[1,20],letrasIdeal.bMatriz[1,21],letrasIdeal.bMatriz[1,22],letrasIdeal.bMatriz[1,23],letrasIdeal.bMatriz[1,24],letrasIdeal.bMatriz[1,25],letrasIdeal.bMatriz[1,26],letrasIdeal.bMatriz[1,27],letrasIdeal.bMatriz[1,28],letrasIdeal.bMatriz[1,29]},
-                new double[]{letrasIdeal.bMatriz[2,0],letrasIdeal.bMatriz[2,1],letrasIdeal.bMatriz[2,2],letrasIdeal.bMatriz[2,3],letrasIdeal.bMatriz[2,4],letrasIdeal.bMatriz[2,5],letrasIdeal.bMatriz[2,6],letrasIdeal.bMatriz[2,7],letrasIdeal.bMatriz[2,8],letrasIdeal.bMatriz[2,9],letrasIdeal.bMatriz[2,10],letrasIdeal.bMatriz[2,11],letrasIdeal.bMatriz[2,12],letrasIdeal.bMatriz[2,13],letrasIdeal.bMatriz[2,14],letrasIdeal.bMatriz[2,15],letrasIdeal.bMatriz[2,16],letrasIdeal.bMatriz[2,17],letrasIdeal.bMatriz[2,18],letrasIdeal.bMatriz[2,19],letrasIdeal.bMatriz[2,20],letrasIdeal.bMatriz[2,21],letrasIdeal.bMatriz[2,22],letrasIdeal.bMatriz[2,23],letrasIdeal.bMatriz[2,24],letrasIdeal.bMatriz[2,25],letrasIdeal.bMatriz[2,26],letrasIdeal.bMatriz[2,27],letrasIdeal.bMatriz[2,28],letrasIdeal.bMatriz[2,29]},
-                new double[]{letrasIdeal.bMatriz[3,0],letrasIdeal.bMatriz[3,1],letrasIdeal.bMatriz[3,2],letrasIdeal.bMatriz[3,3],letrasIdeal.bMatriz[3,4],letrasIdeal.bMatriz[3,5],letrasIdeal.bMatriz[3,6],letrasIdeal.bMatriz[3,7],letrasIdeal.bMatriz[3,8],letrasIdeal.bMatriz[3,9],letrasIdeal.bMatriz[3,10],letrasIdeal.bMatriz[3,11],letrasIdeal.bMatriz[3,12],letrasIdeal.bMatriz[3,13],letrasIdeal.bMatriz[3,14],letrasIdeal.bMatriz[3,15],letrasIdeal.bMatriz[3,16],letrasIdeal.bMatriz[3,17],letrasIdeal.bMatriz[3,18],letrasIdeal.bMatriz[3,19],letrasIdeal.bMatriz[3,20],letrasIdeal.bMatriz[3,21],letrasIdeal.bMatriz[3,22],letrasIdeal.bMatriz[3,23],letrasIdeal.bMatriz[3,24],letrasIdeal.bMatriz[3,25],letrasIdeal.bMatriz[3,26],letrasIdeal.bMatriz[3,27],letrasIdeal.bMatriz[3,28],letrasIdeal.bMatriz[3,29]},
-                new double[]{letrasIdeal.bMatriz[4,0],letrasIdeal.bMatriz[4,1],letrasIdeal.bMatriz[4,2],letrasIdeal.bMatriz[4,3],letrasIdeal.bMatriz[4,4],letrasIdeal.bMatriz[4,5],letrasIdeal.bMatriz[4,6],letrasIdeal.bMatriz[4,7],letrasIdeal.bMatriz[4,8],letrasIdeal.bMatriz[4,9],letrasIdeal.bMatriz[4,10],letrasIdeal.bMatriz[4,11],letrasIdeal.bMatriz[4,12],letrasIdeal.bMatriz[4,13],letrasIdeal.bMatriz[4,14],letrasIdeal.bMatriz[4,15],letrasIdeal.bMatriz[4,16],letrasIdeal.bMatriz[4,17],letrasIdeal.bMatriz[4,18],letrasIdeal.bMatriz[4,19],letrasIdeal.bMatriz[4,20],letrasIdeal.bMatriz[4,21],letrasIdeal.bMatriz[4,22],letrasIdeal.bMatriz[4,23],letrasIdeal.bMatriz[4,24],letrasIdeal.bMatriz[4,25],letrasIdeal.bMatriz[4,26],letrasIdeal.bMatriz[4,27],letrasIdeal.bMatriz[4,28],letrasIdeal.bMatriz[4,29]},
-
-                new double[]{letrasIdeal.bMatriz[5,0],letrasIdeal.bMatriz[5,1],letrasIdeal.bMatriz[5,2],letrasIdeal.bMatriz[5,3],letrasIdeal.bMatriz[5,4],letrasIdeal.bMatriz[5,5],letrasIdeal.bMatriz[5,6],letrasIdeal.bMatriz[5,7],letrasIdeal.bMatriz[5,8],letrasIdeal.bMatriz[5,9],letrasIdeal.bMatriz[5,10],letrasIdeal.bMatriz[5,11],letrasIdeal.bMatriz[5,12],letrasIdeal.bMatriz[5,13],letrasIdeal.bMatriz[5,14],letrasIdeal.bMatriz[5,15],letrasIdeal.bMatriz[5,16],letrasIdeal.bMatriz[5,17],letrasIdeal.bMatriz[5,18],letrasIdeal.bMatriz[5,19],letrasIdeal.bMatriz[5,20],letrasIdeal.bMatriz[5,21],letrasIdeal.bMatriz[5,22],letrasIdeal.bMatriz[5,23],letrasIdeal.bMatriz[5,24],letrasIdeal.bMatriz[5,25],letrasIdeal.bMatriz[5,26],letrasIdeal.bMatriz[5,27],letrasIdeal.bMatriz[5,28],letrasIdeal.bMatriz[5,29]},
-                new double[]{letrasIdeal.bMatriz[6,0],letrasIdeal.bMatriz[6,1],letrasIdeal.bMatriz[6,2],letrasIdeal.bMatriz[6,3],letrasIdeal.bMatriz[6,4],letrasIdeal.bMatriz[6,5],letrasIdeal.bMatriz[6,6],letrasIdeal.bMatriz[6,7],letrasIdeal.bMatriz[6,8],letrasIdeal.bMatriz[6,9],letrasIdeal.bMatriz[6,10],letrasIdeal.bMatriz[6,11],letrasIdeal.bMatriz[6,12],letrasIdeal.bMatriz[6,13],letrasIdeal.bMatriz[6,14],letrasIdeal.bMatriz[6,15],letrasIdeal.bMatriz[6,16],letrasIdeal.bMatriz[6,17],letrasIdeal.bMatriz[6,18],letrasIdeal.bMatriz[6,19],letrasIdeal.bMatriz[6,20],letrasIdeal.bMatriz[6,21],letrasIdeal.bMatriz[6,22],letrasIdeal.bMatriz[6,23],letrasIdeal.bMatriz[6,24],letrasIdeal.bMatriz[6,25],letrasIdeal.bMatriz[6,26],letrasIdeal.bMatriz[6,27],letrasIdeal.bMatriz[6,28],letrasIdeal.bMatriz[6,29]},
-                new double[]{letrasIdeal.bMatriz[7,0],letrasIdeal.bMatriz[7,1],letrasIdeal.bMatriz[7,2],letrasIdeal.bMatriz[7,3],letrasIdeal.bMatriz[7,4],letrasIdeal.bMatriz[7,5],letrasIdeal.bMatriz[7,6],letrasIdeal.bMatriz[7,7],letrasIdeal.bMatriz[7,8],letrasIdeal.bMatriz[7,9],letrasIdeal.bMatriz[7,10],letrasIdeal.bMatriz[7,11],letrasIdeal.bMatriz[7,12],letrasIdeal.bMatriz[7,13],letrasIdeal.bMatriz[7,14],letrasIdeal.bMatriz[7,15],letrasIdeal.bMatriz[7,16],letrasIdeal.bMatriz[7,17],letrasIdeal.bMatriz[7,18],letrasIdeal.bMatriz[7,19],letrasIdeal.bMatriz[7,20],letrasIdeal.bMatriz[7,21],letrasIdeal.bMatriz[7,22],letrasIdeal.bMatriz[7,23],letrasIdeal.bMatriz[7,24],letrasIdeal.bMatriz[7,25],letrasIdeal.bMatriz[7,26],letrasIdeal.bMatriz[7,27],letrasIdeal.bMatriz[7,28],letrasIdeal.bMatriz[7,29]},
-                new double[]{letrasIdeal.bMatriz[8,0],letrasIdeal.bMatriz[8,1],letrasIdeal.bMatriz[8,2],letrasIdeal.bMatriz[8,3],letrasIdeal.bMatriz[8,4],letrasIdeal.bMatriz[8,5],letrasIdeal.bMatriz[8,6],letrasIdeal.bMatriz[8,7],letrasIdeal.bMatriz[8,8],letrasIdeal.bMatriz[8,9],letrasIdeal.bMatriz[8,10],letrasIdeal.bMatriz[8,11],letrasIdeal.bMatriz[8,12],letrasIdeal.bMatriz[8,13],letrasIdeal.bMatriz[8,14],letrasIdeal.bMatriz[8,15],letrasIdeal.bMatriz[8,16],letrasIdeal.bMatriz[8,17],letrasIdeal.bMatriz[8,18],letrasIdeal.bMatriz[8,19],letrasIdeal.bMatriz[8,20],letrasIdeal.bMatriz[8,21],letrasIdeal.bMatriz[8,22],letrasIdeal.bMatriz[8,23],letrasIdeal.bMatriz[8,24],letrasIdeal.bMatriz[8,25],letrasIdeal.bMatriz[8,26],letrasIdeal.bMatriz[8,27],letrasIdeal.bMatriz[8,28],letrasIdeal.bMatriz[8,29]},
-                new double[]{letrasIdeal.bMatriz[9,0],letrasIdeal.bMatriz[9,1],letrasIdeal.bMatriz[9,2],letrasIdeal.bMatriz[9,3],letrasIdeal.bMatriz[9,4],letrasIdeal.bMatriz[9,5],letrasIdeal.bMatriz[9,6],letrasIdeal.bMatriz[9,7],letrasIdeal.bMatriz[9,8],letrasIdeal.bMatriz[9,9],letrasIdeal.bMatriz[9,10],letrasIdeal.bMatriz[9,11],letrasIdeal.bMatriz[9,12],letrasIdeal.bMatriz[9,13],letrasIdeal.bMatriz[9,14],letrasIdeal.bMatriz[9,15],letrasIdeal.bMatriz[9,16],letrasIdeal.bMatriz[9,17],letrasIdeal.bMatriz[9,18],letrasIdeal.bMatriz[9,19],letrasIdeal.bMatriz[9,20],letrasIdeal.bMatriz[9,21],letrasIdeal.bMatriz[9,22],letrasIdeal.bMatriz[9,23],letrasIdeal.bMatriz[9,24],letrasIdeal.bMatriz[9,25],letrasIdeal.bMatriz[9,26],letrasIdeal.bMatriz[9,27],letrasIdeal.bMatriz[9,28],letrasIdeal.bMatriz[9,29]},
-
-                new double[]{letrasIdeal.bMatriz[10,0],letrasIdeal.bMatriz[10,1],letrasIdeal.bMatriz[10,2],letrasIdeal.bMatriz[10,3],letrasIdeal.bMatriz[10,4],letrasIdeal.bMatriz[10,5],letrasIdeal.bMatriz[10,6],letrasIdeal.bMatriz[10,7],letrasIdeal.bMatriz[10,8],letrasIdeal.bMatriz[10,9],letrasIdeal.bMatriz[10,10],letrasIdeal.bMatriz[10,11],letrasIdeal.bMatriz[10,12],letrasIdeal.bMatriz[10,13],letrasIdeal.bMatriz[10,14],letrasIdeal.bMatriz[10,15],letrasIdeal.bMatriz[10,16],letrasIdeal.bMatriz[10,17],letrasIdeal.bMatriz[10,18],letrasIdeal.bMatriz[10,19],letrasIdeal.bMatriz[10,20],letrasIdeal.bMatriz[10,21],letrasIdeal.bMatriz[10,22],letrasIdeal.bMatriz[10,23],letrasIdeal.bMatriz[10,24],letrasIdeal.bMatriz[10,25],letrasIdeal.bMatriz[10,26],letrasIdeal.bMatriz[10,27],letrasIdeal.bMatriz[10,28],letrasIdeal.bMatriz[10,29]},
-                new double[]{letrasIdeal.bMatriz[11,0],letrasIdeal.bMatriz[11,1],letrasIdeal.bMatriz[11,2],letrasIdeal.bMatriz[11,3],letrasIdeal.bMatriz[11,4],letrasIdeal.bMatriz[11,5],letrasIdeal.bMatriz[11,6],letrasIdeal.bMatriz[11,7],letrasIdeal.bMatriz[11,8],letrasIdeal.bMatriz[11,9],letrasIdeal.bMatriz[11,10],letrasIdeal.bMatriz[11,11],letrasIdeal.bMatriz[11,12],letrasIdeal.bMatriz[11,13],letrasIdeal.bMatriz[11,14],letrasIdeal.bMatriz[11,15],letrasIdeal.bMatriz[11,16],letrasIdeal.bMatriz[11,17],letrasIdeal.bMatriz[11,18],letrasIdeal.bMatriz[11,19],letrasIdeal.bMatriz[11,20],letrasIdeal.bMatriz[11,21],letrasIdeal.bMatriz[11,22],letrasIdeal.bMatriz[11,23],letrasIdeal.bMatriz[11,24],letrasIdeal.bMatriz[11,25],letrasIdeal.bMatriz[11,26],letrasIdeal.bMatriz[11,27],letrasIdeal.bMatriz[11,28],letrasIdeal.bMatriz[11,29]},
-                new double[]{letrasIdeal.bMatriz[12,0],letrasIdeal.bMatriz[12,1],letrasIdeal.bMatriz[12,2],letrasIdeal.bMatriz[12,3],letrasIdeal.bMatriz[12,4],letrasIdeal.bMatriz[12,5],letrasIdeal.bMatriz[12,6],letrasIdeal.bMatriz[12,7],letrasIdeal.bMatriz[12,8],letrasIdeal.bMatriz[12,9],letrasIdeal.bMatriz[12,10],letrasIdeal.bMatriz[12,11],letrasIdeal.bMatriz[12,12],letrasIdeal.bMatriz[12,13],letrasIdeal.bMatriz[12,14],letrasIdeal.bMatriz[12,15],letrasIdeal.bMatriz[12,16],letrasIdeal.bMatriz[12,17],letrasIdeal.bMatriz[12,18],letrasIdeal.bMatriz[12,19],letrasIdeal.bMatriz[12,20],letrasIdeal.bMatriz[12,21],letrasIdeal.bMatriz[12,22],letrasIdeal.bMatriz[12,23],letrasIdeal.bMatriz[12,24],letrasIdeal.bMatriz[12,25],letrasIdeal.bMatriz[12,26],letrasIdeal.bMatriz[12,27],letrasIdeal.bMatriz[12,28],letrasIdeal.bMatriz[12,29]},
-                new double[]{letrasIdeal.bMatriz[13,0],letrasIdeal.bMatriz[13,1],letrasIdeal.bMatriz[13,2],letrasIdeal.bMatriz[13,3],letrasIdeal.bMatriz[13,4],letrasIdeal.bMatriz[13,5],letrasIdeal.bMatriz[13,6],letrasIdeal.bMatriz[13,7],letrasIdeal.bMatriz[13,8],letrasIdeal.bMatriz[13,9],letrasIdeal.bMatriz[13,10],letrasIdeal.bMatriz[13,11],letrasIdeal.bMatriz[13,12],letrasIdeal.bMatriz[13,13],letrasIdeal.bMatriz[13,14],letrasIdeal.bMatriz[13,15],letrasIdeal.bMatriz[13,16],letrasIdeal.bMatriz[13,17],letrasIdeal.bMatriz[13,18],letrasIdeal.bMatriz[13,19],letrasIdeal.bMatriz[13,20],letrasIdeal.bMatriz[13,21],letrasIdeal.bMatriz[13,22],letrasIdeal.bMatriz[13,23],letrasIdeal.bMatriz[13,24],letrasIdeal.bMatriz[13,25],letrasIdeal.bMatriz[13,26],letrasIdeal.bMatriz[13,27],letrasIdeal.bMatriz[13,28],letrasIdeal.bMatriz[13,29]},
-                new double[]{letrasIdeal.bMatriz[14,0],letrasIdeal.bMatriz[14,1],letrasIdeal.bMatriz[14,2],letrasIdeal.bMatriz[14,3],letrasIdeal.bMatriz[14,4],letrasIdeal.bMatriz[14,5],letrasIdeal.bMatriz[14,6],letrasIdeal.bMatriz[14,7],letrasIdeal.bMatriz[14,8],letrasIdeal.bMatriz[14,9],letrasIdeal.bMatriz[14,10],letrasIdeal.bMatriz[14,11],letrasIdeal.bMatriz[14,12],letrasIdeal.bMatriz[14,13],letrasIdeal.bMatriz[14,14],letrasIdeal.bMatriz[14,15],letrasIdeal.bMatriz[14,16],letrasIdeal.bMatriz[14,17],letrasIdeal.bMatriz[14,18],letrasIdeal.bMatriz[14,19],letrasIdeal.bMatriz[14,20],letrasIdeal.bMatriz[14,21],letrasIdeal.bMatriz[14,22],letrasIdeal.bMatriz[14,23],letrasIdeal.bMatriz[14,24],letrasIdeal.bMatriz[14,25],letrasIdeal.bMatriz[14,26],letrasIdeal.bMatriz[14,27],letrasIdeal.bMatriz[14,28],letrasIdeal.bMatriz[14,29]},
-
-                new double[]{letrasIdeal.bMatriz[15,0],letrasIdeal.bMatriz[15,1],letrasIdeal.bMatriz[15,2],letrasIdeal.bMatriz[15,3],letrasIdeal.bMatriz[15,4],letrasIdeal.bMatriz[15,5],letrasIdeal.bMatriz[15,6],letrasIdeal.bMatriz[15,7],letrasIdeal.bMatriz[15,8],letrasIdeal.bMatriz[15,9],letrasIdeal.bMatriz[15,10],letrasIdeal.bMatriz[15,11],letrasIdeal.bMatriz[15,12],letrasIdeal.bMatriz[15,13],letrasIdeal.bMatriz[15,14],letrasIdeal.bMatriz[15,15],letrasIdeal.bMatriz[15,16],letrasIdeal.bMatriz[15,17],letrasIdeal.bMatriz[15,18],letrasIdeal.bMatriz[15,19],letrasIdeal.bMatriz[15,20],letrasIdeal.bMatriz[15,21],letrasIdeal.bMatriz[15,22],letrasIdeal.bMatriz[15,23],letrasIdeal.bMatriz[15,24],letrasIdeal.bMatriz[15,25],letrasIdeal.bMatriz[15,26],letrasIdeal.bMatriz[15,27],letrasIdeal.bMatriz[15,28],letrasIdeal.bMatriz[15,29]},
-                new double[]{letrasIdeal.bMatriz[16,0],letrasIdeal.bMatriz[16,1],letrasIdeal.bMatriz[16,2],letrasIdeal.bMatriz[16,3],letrasIdeal.bMatriz[16,4],letrasIdeal.bMatriz[16,5],letrasIdeal.bMatriz[16,6],letrasIdeal.bMatriz[16,7],letrasIdeal.bMatriz[16,8],letrasIdeal.bMatriz[16,9],letrasIdeal.bMatriz[16,10],letrasIdeal.bMatriz[16,11],letrasIdeal.bMatriz[16,12],letrasIdeal.bMatriz[16,13],letrasIdeal.bMatriz[16,14],letrasIdeal.bMatriz[16,15],letrasIdeal.bMatriz[16,16],letrasIdeal.bMatriz[16,17],letrasIdeal.bMatriz[16,18],letrasIdeal.bMatriz[16,19],letrasIdeal.bMatriz[16,20],letrasIdeal.bMatriz[16,21],letrasIdeal.bMatriz[16,22],letrasIdeal.bMatriz[16,23],letrasIdeal.bMatriz[16,24],letrasIdeal.bMatriz[16,25],letrasIdeal.bMatriz[16,26],letrasIdeal.bMatriz[16,27],letrasIdeal.bMatriz[16,28],letrasIdeal.bMatriz[16,29]},
-                new double[]{letrasIdeal.bMatriz[17,0],letrasIdeal.bMatriz[17,1],letrasIdeal.bMatriz[17,2],letrasIdeal.bMatriz[17,3],letrasIdeal.bMatriz[17,4],letrasIdeal.bMatriz[17,5],letrasIdeal.bMatriz[17,6],letrasIdeal.bMatriz[17,7],letrasIdeal.bMatriz[17,8],letrasIdeal.bMatriz[17,9],letrasIdeal.bMatriz[17,10],letrasIdeal.bMatriz[17,11],letrasIdeal.bMatriz[17,12],letrasIdeal.bMatriz[17,13],letrasIdeal.bMatriz[17,14],letrasIdeal.bMatriz[17,15],letrasIdeal.bMatriz[17,16],letrasIdeal.bMatriz[17,17],letrasIdeal.bMatriz[17,18],letrasIdeal.bMatriz[17,19],letrasIdeal.bMatriz[17,20],letrasIdeal.bMatriz[17,21],letrasIdeal.bMatriz[17,22],letrasIdeal.bMatriz[17,23],letrasIdeal.bMatriz[17,24],letrasIdeal.bMatriz[17,25],letrasIdeal.bMatriz[17,26],letrasIdeal.bMatriz[17,27],letrasIdeal.bMatriz[17,28],letrasIdeal.bMatriz[17,29]},
-                new double[]{letrasIdeal.bMatriz[18,0],letrasIdeal.bMatriz[18,1],letrasIdeal.bMatriz[18,2],letrasIdeal.bMatriz[18,3],letrasIdeal.bMatriz[18,4],letrasIdeal.bMatriz[18,5],letrasIdeal.bMatriz[18,6],letrasIdeal.bMatriz[18,7],letrasIdeal.bMatriz[18,8],letrasIdeal.bMatriz[18,9],letrasIdeal.bMatriz[18,10],letrasIdeal.bMatriz[18,11],letrasIdeal.bMatriz[18,12],letrasIdeal.bMatriz[18,13],letrasIdeal.bMatriz[18,14],letrasIdeal.bMatriz[18,15],letrasIdeal.bMatriz[18,16],letrasIdeal.bMatriz[18,17],letrasIdeal.bMatriz[18,18],letrasIdeal.bMatriz[18,19],letrasIdeal.bMatriz[18,20],letrasIdeal.bMatriz[18,21],letrasIdeal.bMatriz[18,22],letrasIdeal.bMatriz[18,23],letrasIdeal.bMatriz[18,24],letrasIdeal.bMatriz[18,25],letrasIdeal.bMatriz[18,26],letrasIdeal.bMatriz[18,27],letrasIdeal.bMatriz[18,28],letrasIdeal.bMatriz[18,29]},
-                new double[]{letrasIdeal.bMatriz[19,0],letrasIdeal.bMatriz[19,1],letrasIdeal.bMatriz[19,2],letrasIdeal.bMatriz[19,3],letrasIdeal.bMatriz[19,4],letrasIdeal.bMatriz[19,5],letrasIdeal.bMatriz[19,6],letrasIdeal.bMatriz[19,7],letrasIdeal.bMatriz[19,8],letrasIdeal.bMatriz[19,9],letrasIdeal.bMatriz[19,10],letrasIdeal.bMatriz[19,11],letrasIdeal.bMatriz[19,12],letrasIdeal.bMatriz[19,13],letrasIdeal.bMatriz[19,14],letrasIdeal.bMatriz[19,15],letrasIdeal.bMatriz[19,16],letrasIdeal.bMatriz[19,17],letrasIdeal.bMatriz[19,18],letrasIdeal.bMatriz[19,19],letrasIdeal.bMatriz[19,20],letrasIdeal.bMatriz[19,21],letrasIdeal.bMatriz[19,22],letrasIdeal.bMatriz[19,23],letrasIdeal.bMatriz[19,24],letrasIdeal.bMatriz[19,25],letrasIdeal.bMatriz[19,26],letrasIdeal.bMatriz[19,27],letrasIdeal.bMatriz[19,28],letrasIdeal.bMatriz[19,29]},
-
-                new double[]{letrasIdeal.bMatriz[20,0],letrasIdeal.bMatriz[20,1],letrasIdeal.bMatriz[20,2],letrasIdeal.bMatriz[20,3],letrasIdeal.bMatriz[20,4],letrasIdeal.bMatriz[20,5],letrasIdeal.bMatriz[20,6],letrasIdeal.bMatriz[20,7],letrasIdeal.bMatriz[20,8],letrasIdeal.bMatriz[20,9],letrasIdeal.bMatriz[20,10],letrasIdeal.bMatriz[20,11],letrasIdeal.bMatriz[20,12],letrasIdeal.bMatriz[20,13],letrasIdeal.bMatriz[20,14],letrasIdeal.bMatriz[20,15],letrasIdeal.bMatriz[20,16],letrasIdeal.bMatriz[20,17],letrasIdeal.bMatriz[20,18],letrasIdeal.bMatriz[20,19],letrasIdeal.bMatriz[20,20],letrasIdeal.bMatriz[20,21],letrasIdeal.bMatriz[20,22],letrasIdeal.bMatriz[20,23],letrasIdeal.bMatriz[20,24],letrasIdeal.bMatriz[20,25],letrasIdeal.bMatriz[20,26],letrasIdeal.bMatriz[20,27],letrasIdeal.bMatriz[20,28],letrasIdeal.bMatriz[20,29]},
-                new double[]{letrasIdeal.bMatriz[21,0],letrasIdeal.bMatriz[21,1],letrasIdeal.bMatriz[21,2],letrasIdeal.bMatriz[21,3],letrasIdeal.bMatriz[21,4],letrasIdeal.bMatriz[21,5],letrasIdeal.bMatriz[21,6],letrasIdeal.bMatriz[21,7],letrasIdeal.bMatriz[21,8],letrasIdeal.bMatriz[21,9],letrasIdeal.bMatriz[21,10],letrasIdeal.bMatriz[21,11],letrasIdeal.bMatriz[21,12],letrasIdeal.bMatriz[21,13],letrasIdeal.bMatriz[21,14],letrasIdeal.bMatriz[21,15],letrasIdeal.bMatriz[21,16],letrasIdeal.bMatriz[21,17],letrasIdeal.bMatriz[21,18],letrasIdeal.bMatriz[21,19],letrasIdeal.bMatriz[21,20],letrasIdeal.bMatriz[21,21],letrasIdeal.bMatriz[21,22],letrasIdeal.bMatriz[21,23],letrasIdeal.bMatriz[21,24],letrasIdeal.bMatriz[21,25],letrasIdeal.bMatriz[21,26],letrasIdeal.bMatriz[21,27],letrasIdeal.bMatriz[21,28],letrasIdeal.bMatriz[21,29]},
-                new double[]{letrasIdeal.bMatriz[22,0],letrasIdeal.bMatriz[22,1],letrasIdeal.bMatriz[22,2],letrasIdeal.bMatriz[22,3],letrasIdeal.bMatriz[22,4],letrasIdeal.bMatriz[22,5],letrasIdeal.bMatriz[22,6],letrasIdeal.bMatriz[22,7],letrasIdeal.bMatriz[22,8],letrasIdeal.bMatriz[22,9],letrasIdeal.bMatriz[22,10],letrasIdeal.bMatriz[22,11],letrasIdeal.bMatriz[22,12],letrasIdeal.bMatriz[22,13],letrasIdeal.bMatriz[22,14],letrasIdeal.bMatriz[22,15],letrasIdeal.bMatriz[22,16],letrasIdeal.bMatriz[22,17],letrasIdeal.bMatriz[22,18],letrasIdeal.bMatriz[22,19],letrasIdeal.bMatriz[22,20],letrasIdeal.bMatriz[22,21],letrasIdeal.bMatriz[22,22],letrasIdeal.bMatriz[22,23],letrasIdeal.bMatriz[22,24],letrasIdeal.bMatriz[22,25],letrasIdeal.bMatriz[22,26],letrasIdeal.bMatriz[22,27],letrasIdeal.bMatriz[22,28],letrasIdeal.bMatriz[22,29]}
-            };
-                
-        /*    Console.WriteLine(x[0][0]);
-            Console.WriteLine(x[1].Max());
-            Console.WriteLine(x[2].Max());*/
-
-            //Creando network
-            BasicNetwork network = new BasicNetwork();
-            network.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 30)); //30 neuronas de entrada
-            network.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 25)); //5 neuronas ocultas
-            network.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 30)); //1 neurona de salida
-            network.Structure.FinalizeStructure();
-            network.Reset();
-
-            //Entrenamiento
-            IMLDataSet dataset = new BasicMLDataSet(x, y);
-            ITrain learner = new Backpropagation(network, dataset);
-            for(int i = 0; i < 3000; i++)
-            {
-                learner.Iteration();
-                Console.WriteLine("error: " + learner.Error);
-            }
-
-            //Prueba
-           foreach(BasicMLDataPair pair in dataset)
-            {
-                IMLData result = network.Compute(pair.Input);
-                double suma = result[0] + result[1] + result[2] + result[3] + result[4] + result[5] + result[6] + result[7] + result[8] + result[9] + result[10] + result[11] + result[12] + result[13] + result[14] + result[15] + result[16] + result[17] + result[18] + result[19] + result[20] + result[21] + result[22] + result[23] + result[24] + result[25] + result[26] + result[27] + result[28] + result[29];
-                Console.WriteLine("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}{13}{14}{15}{16}{17}{18}{19}{20}{21}{22}{23}{24}{25}{26}{27}{28}{29} = {30}{31}{32}{33}{34}{35}{36}{37}{38}{39}{40}{41}{42}{43}{44}{45}{46}{47}{48}{49}{50}{51}{52}{53}{54}{55}{56}{57}{58}{59} -> {60}", pair.Input[0], pair.Input[1], pair.Input[2], pair.Input[3], pair.Input[4], pair.Input[5], pair.Input[6], pair.Input[7], pair.Input[8], pair.Input[9], pair.Input[10], pair.Input[11], pair.Input[12], pair.Input[13], pair.Input[14], pair.Input[15], pair.Input[16], pair.Input[17], pair.Input[18], pair.Input[19], pair.Ideal[20], pair.Input[21], pair.Input[22], pair.Input[23], pair.Input[24], pair.Input[25], pair.Input[26], pair.Input[27], pair.Input[28], pair.Input[29], pair.Ideal[0], pair.Ideal[1], pair.Ideal[2], pair.Ideal[3], pair.Ideal[4], pair.Ideal[5], pair.Ideal[6], pair.Ideal[7], pair.Ideal[8], pair.Ideal[9], pair.Ideal[10], pair.Ideal[11], pair.Ideal[12], pair.Ideal[13], pair.Ideal[14], pair.Ideal[15], pair.Ideal[16], pair.Ideal[17], pair.Ideal[18], pair.Ideal[19], pair.Ideal[20], pair.Ideal[21], pair.Ideal[22], pair.Ideal[23], pair.Ideal[24], pair.Ideal[25], pair.Ideal[26], pair.Ideal[27], pair.Ideal[28], pair.Ideal[29],suma);
+                Console.WriteLine(numero.coincidenciaConLetra + " Letra " + numero.letra);
             }
 
             Console.ReadLine();
+
+        }
+
+        class Letras
+        {
+            public double coincidenciaConLetra { get; set; }
+            public string letra { get; set; }
         }
     }
 }
