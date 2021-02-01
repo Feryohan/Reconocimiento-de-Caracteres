@@ -4,6 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using Encog.Engine.Network.Activation;
+using Encog.Neural.Networks;
+using Encog.Neural.Networks.Layers;
+using Encog.Neural.Networks.Training;
+using Encog.Neural.Networks.Structure;
+using Encog.Neural.Networks.Training.Propagation.Back;
+using Encog.ML.Data;
+using Encog.ML.Data.Basic;
 
 namespace Reconocimiento_de_caracteres
 {
@@ -11,6 +19,7 @@ namespace Reconocimiento_de_caracteres
     {
         static void Main(string[] args)
         {
+            
             int ASCII;
             //Objeto para guardar los valors de 0 y 1 
             //de las letras que marcan la salida que las neuronas deben tener 
@@ -107,24 +116,66 @@ namespace Reconocimiento_de_caracteres
             }
             #endregion
 
+            
             #region Lectura de las letras DataBase
             //Lectura letras B
             for(int i = 1; i <= letrasDataBase.bNumero; i++)
             {
-                letrasDataBase.bMatriz = matrizCaracteres.lecturaDataBase(letrasDataBase.bDireccion, i);
+                letrasDataBase.cMatriz = matrizCaracteres.lecturaDataBase(letrasDataBase.bDireccion, i);
             }
             #endregion
 
             Console.WriteLine("\n\n");
 
-            for (int y = 0; y < 23; y++)
+            for (int yy = 0; yy < 23; yy++)
             {
-                for (int x = 0; x < 30; x++)
+                for (int xx = 0; xx < 30; xx++)
                 {
-                    Console.Write(letrasIdeal.bMatriz[y,x]);
+                    Console.Write(letrasDataBase.cMatriz[yy,xx]);
                 }
                 Console.Write("\n");
             }
+            
+
+            //data set sum
+            double[][] x =
+            {
+                new double[]{0.0,0.5}, //0.5
+                new double[]{0.2,0.6}, //0.8
+                new double[]{0.5,0.5}  //1.0
+            };
+
+            double[][] y =
+            {
+                new double[]{0.5},
+                new double[]{0.8},
+                new double[]{1.0}
+            };
+
+            //Creando network
+            BasicNetwork network = new BasicNetwork();
+            network.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 2)); //2 neuronas de entrada
+            network.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 5)); //5 neuronas ocultas
+            network.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 1)); //1 neurona de salida
+            network.Structure.FinalizeStructure();
+            network.Reset();
+
+            //Entrenamiento
+            IMLDataSet dataset = new BasicMLDataSet(x, y);
+            ITrain learner = new Backpropagation(network, dataset);
+            for(int i = 0; i < 3000; i++)
+            {
+                learner.Iteration();
+                Console.WriteLine("error: " + learner.Error);
+            }
+
+            //Prueba
+            foreach(BasicMLDataPair pair in dataset)
+            {
+                IMLData result = network.Compute(pair.Input);
+                Console.WriteLine("{0} + {1} = {2} -> {3}", pair.Input[0], pair.Input[1], pair.Ideal[0], result[0]);
+            }
+
             Console.ReadLine();
         }
     }

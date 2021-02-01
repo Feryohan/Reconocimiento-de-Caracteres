@@ -10,82 +10,82 @@ namespace Reconocimiento_de_caracteres
     public class matrizCaracteres
     {
         #region Matriz, Dirección y Numero de las Letras
-        public int[,] aMatriz { get; set; }
+        public double[,] aMatriz { get; set; }
         public string aDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\A\A";
         public int aNumero = 13;
-        public int[,] bMatriz { get; set; }
+        public double[,] bMatriz { get; set; }
         public string bDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\B\B";
         public int bNumero = 14;
-        public int[,] cMatriz { get; set; }
+        public double[,] cMatriz { get; set; }
         public string cDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\C\C";
         public int cNumero = 14;
-        public int[,] dMatriz { get; set; }
+        public double[,] dMatriz { get; set; }
         public string dDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\D\D";
         public int dNumero = 14;
-        public int[,] eMatriz { get; set; }
+        public double[,] eMatriz { get; set; }
         public string eDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\E\E";
         public int eNumero = 14;
-        public int[,] fMatriz { get; set; }
+        public double[,] fMatriz { get; set; }
         public string fDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\F\F";
         public int fNumero = 14;
-        public int[,] gMatriz { get; set; }
+        public double[,] gMatriz { get; set; }
         public string gDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\G\G";
         public int gNumero = 12;
-        public int[,] hMatriz { get; set; }
+        public double[,] hMatriz { get; set; }
         public string hDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\H\H";
         public int hNumero = 14;
-        public int[,] iMatriz { get; set; }
+        public double[,] iMatriz { get; set; }
         public string iDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\I\I";
         public int iNumero = 11;
-        public int[,] jMatriz { get; set; }
+        public double[,] jMatriz { get; set; }
         public string jDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\J\J";
         public int jNumero = 14;
-        public int[,] kMatriz { get; set; }
+        public double[,] kMatriz { get; set; }
         public string kDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\K\K";
         public int kNumero = 13;
-        public int[,] lMatriz { get; set; }
+        public double[,] lMatriz { get; set; }
         public string lDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\L\L";
         public int lNumero = 14;
-        public int[,] mMatriz { get; set; }
+        public double[,] mMatriz { get; set; }
         public string mDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\M\M";
         public int mNumero = 11;
-        public int[,] nMatriz { get; set; }
+        public double[,] nMatriz { get; set; }
         public string nDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\N\N";
         public int nNumero = 14;
-        public int[,] oMatriz { get; set; }
+        public double[,] oMatriz { get; set; }
         public string oDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\O\O";
         public int oNumero = 14;
-        public int[,] pMatriz { get; set; }
+        public double[,] pMatriz { get; set; }
         public string pDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\P\P";
         public int pNumero = 14;
-        public int[,] qMatriz { get; set; }
+        public double[,] qMatriz { get; set; }
         public string qDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\Q\Q";
         public int qNumero = 12;
-        public int[,] rMatriz { get; set; }
+        public double[,] rMatriz { get; set; }
         public string rDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\R\R";
         public int rNumero = 12;
-        public int[,] sMatriz { get; set; }
+        public double[,] sMatriz { get; set; }
         public string sDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\S\S";
         public int sNumero = 14;
-        public int[,] tMatriz { get; set; }
+        public double[,] tMatriz { get; set; }
         public string tDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\T\T";
         public int tNumero = 14;
-        public int[,] uMatriz { get; set; }
+        public double[,] uMatriz { get; set; }
         public string uDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\U\U";
         public int uNumero = 9;
-        public int[,] vMatriz { get; set; }
+        public double[,] vMatriz { get; set; }
         public string vDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\V\V";
         public int vNumero = 14;
-        public int[,] wMatriz { get; set; }
+        public double[,] wMatriz { get; set; }
         public string wDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\W\W";
         public int wNumero = 8;
-        public int[,] xMatriz { get; set; }
+        public double[,] xMatriz { get; set; }
         public string xDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\X\X";
         public int xNumero = 14;
-        public int[,] yMatriz { get; set; }
+        public double[,] yMatriz { get; set; }
         public string yDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\Y\Y";
         public int yNumero = 12;
-        public int[,] zMatriz { get; set; }
+        public double[,] zMatriz { get; set; }
         public string zDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\Z\Z";
         public int zNumero = 14;
         #endregion
@@ -94,12 +94,12 @@ namespace Reconocimiento_de_caracteres
         //Se crea una matriz, para cada letra, con un valor de 0 (blanco) o 1 (negro)
         //en cada pixel
         //es una matriz de 23x30
-        public static int[,] asignacionBits(char letra)
+        public static double[,] asignacionBits(char letra)
         {
             //Representación grafica de la imagen
             string valorPixel;
             //Arreglo para guardar la información de los pixeles
-            int[,] arregloBits = new int[23, 30];
+            double[,] arregloBits = new double[23, 30];
             //Dirección de la imagen
             string path = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\Letras de Entrada\" + letra + ".png";
             //imagen
@@ -125,13 +125,13 @@ namespace Reconocimiento_de_caracteres
                     {
                         //Negro
                         valorPixel = " ";
-                        arregloBits[y, x] = 1;
+                        arregloBits[y, x] = 1.0;
                     }
                     else
                     {
                         //Blanco
                         valorPixel = "█";
-                        arregloBits[y, x] = 0;
+                        arregloBits[y, x] = 0.0;
                     }
                     Console.Write(valorPixel);
                 }
@@ -145,12 +145,12 @@ namespace Reconocimiento_de_caracteres
         //Se crea una matriz, para cada letra, con un valor de 0 (blanco) o 1 (negro)
         //en cada pixel
         //es una matriz de 23x30
-        public static int[,] lecturaDataBase(string direccion, int letraNumero)
+        public static double[,] lecturaDataBase(string direccion, int letraNumero)
         {
             //Representación grafica de la imagen
             string valorPixel;
             //Arreglo para guardar la información de los pixeles
-            int[,] arregloBits = new int[23, 30];
+            double[,] arregloBits = new double[23, 30];
             //Dirección de la imagen
             string path = direccion + Convert.ToString(letraNumero) + ".png";
             //imagen
@@ -176,13 +176,13 @@ namespace Reconocimiento_de_caracteres
                     {
                         //Negro
                         valorPixel = " ";
-                        arregloBits[y, x] = 1;
+                        arregloBits[y, x] = 1.0;
                     }
                     else
                     {
                         //Blanco
                         valorPixel = "█";
-                        arregloBits[y, x] = 0;
+                        arregloBits[y, x] = 0.0;
                     }
                     Console.Write(valorPixel);
                 }

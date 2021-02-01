@@ -7,3 +7,4 @@ C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\P
 C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\obj\Debug\PruebasBitMap.csproj.CopyComplete
 C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\obj\Debug\Reconocimiento de caracteres.exe
 C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\obj\Debug\Reconocimiento de caracteres.pdb
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Reconocimiento de caracteres\bin\Debug\encog-core-cs.dll
