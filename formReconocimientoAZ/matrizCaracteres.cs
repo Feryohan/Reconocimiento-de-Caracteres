@@ -14,10 +14,11 @@ using Encog.ML.Data;
 using Encog.ML.Data.Basic;
 using System.IO;
 
-namespace Reconocimiento_de_caracteres
+namespace formReconocimientoAZ
 {
     public class matrizCaracteres
     {
+
         #region Atributos: Matriz, Dirección y Numero de las Letras
         public double[,] aMatriz { get; set; }
         public string aDireccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\Data Base (A-Z)\A\A";
@@ -158,7 +159,6 @@ namespace Reconocimiento_de_caracteres
         public static double[,] lecturaLetrasIdeales(char letra)
         {
             //Representación grafica de la imagen
-            string valorPixel;
             //Arreglo para guardar la información de los pixeles
             double[,] arregloBits = new double[23, 30];
             //Dirección de la imagen
@@ -185,18 +185,14 @@ namespace Reconocimiento_de_caracteres
                     if (colorGrises != 255 & colorGrises < 245)
                     {
                         //Negro
-                        valorPixel = " ";
                         arregloBits[y, x] = 1.0;
                     }
                     else
                     {
                         //Blanco
-                        valorPixel = "█";
                         arregloBits[y, x] = 0.0;
                     }
-                   // Console.Write(valorPixel);
                 }
-                //Console.Write("\n");
             }
             return arregloBits;
         }
@@ -206,60 +202,11 @@ namespace Reconocimiento_de_caracteres
         //Se crea una matriz, para cada letra, con un valor de 0 (blanco) o 1 (negro)
         //en cada pixel
         //es una matriz de 23x30
-        public static double[,] lecturaDataBase(string direccion, int letraNumero)
-        {
-            //Representación grafica de la imagen
-            string valorPixel;
-            //Arreglo para guardar la información de los pixeles
-            double[,] arregloBits = new double[23, 30];
-            //Dirección de la imagen
-            string path = direccion + Convert.ToString(letraNumero) + ".png";
-            //imagen
-            Bitmap image = new Bitmap(path, true);
-            //Ciclo para extraer el 0 o 1 de cada pixel
-            for (int y = 0; y < image.Height; y++)
-            {
-                for (int x = 0; x < image.Width; x++)
-                {
-                    //Obtiene el color RGB y el brillo del pixel (x,y)
-                    Color colorRGB = image.GetPixel(x, y);
-
-                    int valorRed = colorRGB.R;
-                    int valorGreen = colorRGB.G;
-                    int valorBlue = colorRGB.B;
-
-                    //fórmula NTSC: 0.299 ∙ Rojo + 0.587 ∙ Verde + 0.114 ∙ Azul.
-                    double colorGrises = 0.299 * valorRed + 0.587 * valorGreen + 0.114 * valorBlue;
-
-                    //Blanco = 255 = 0
-                    //Negro != 255 = 1
-                    if (colorGrises != 255 & colorGrises < 245)
-                    {
-                        //Negro
-                        valorPixel = " ";
-                        arregloBits[y, x] = 1.0;
-                    }
-                    else
-                    {
-                        //Blanco
-                        valorPixel = "█";
-                        arregloBits[y, x] = 0.0;
-                    }
-                   // Console.Write(valorPixel);
-                }
-              //  Console.Write("\n");
-            }
-            return arregloBits;
-        }
-        #endregion
-
-        #region Método: lectura de Letra Usuario
         public static double[,] lecturaDataUsuario(string path)
         {
             //Representación grafica de la imagen
             //Arreglo para guardar la información de los pixeles
             double[,] arregloBits = new double[23, 30];
-            //Dirección de la imagen
             //imagen
             Bitmap image = new Bitmap(path, true);
             //Ciclo para extraer el 0 o 1 de cada pixel
@@ -279,7 +226,7 @@ namespace Reconocimiento_de_caracteres
 
                     //Blanco = 255 = 0
                     //Negro != 255 = 1
-                    if (colorGrises != 255 & colorGrises < 100)
+                    if (colorGrises != 255 & colorGrises < 200)
                     {
                         //Negro
                         arregloBits[y, x] = 1.0;
@@ -329,130 +276,32 @@ namespace Reconocimiento_de_caracteres
             };
             return dataSet;
         }
-
-        public static double sumaFila(double[,] arreglo,int fila)
-        {
-            double sumaFila = 0.0;
-            for(int i = 0; i<30; i++)
-            {
-                sumaFila = sumaFila + arreglo[fila, i];
-            }
-            return sumaFila;
-        }
-
-
-        public static double[][] creacionDataIdeal(double[,] matrizInformacion)
-        {
-            double[][] dataSet =
-            {
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,0)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,1)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,2)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,3)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,4)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,5)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,6)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,7)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,8)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,9)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,10)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,11)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,12)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,13)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,14)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,15)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,16)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,17)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,18)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,19)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,20)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,21)},
-                new double[]{matrizCaracteres.sumaFila(matrizInformacion,22)},
-            };
-            return dataSet;
-        }
-
         #endregion
 
         #region Método: Uso de redNeuronal
-        public static double redNeuronal(double[,] letrasInput, double[,] letrasIdeal)
+        public static double redNeuronal(double[][] dataInput, double[][] dataIdeal)
         {
-            //dataSet
-            double[][] dataInput = matrizCaracteres.creacionDataSet(letrasInput);
-            double[][] dataIdeal = matrizCaracteres.creacionDataSet(letrasIdeal);
-
             //Creando network
             BasicNetwork network = new BasicNetwork();
             network.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 30)); //30 neuronas de entrada
             network.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 25)); //5 neuronas ocultas
-            network.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 30)); //1 neurona de salida
+            network.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 30)); //30 neurona de salida
             network.Structure.FinalizeStructure();
             network.Reset();
 
             //Entrenamiento
             IMLDataSet dataset = new BasicMLDataSet(dataInput, dataIdeal);
             ITrain learner = new Backpropagation(network, dataset);
-            for (int i = 0; i < 3000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 learner.Iteration();
             }
 
-
-            Console.WriteLine("error final: " + learner.Error);
             //Utilizando el error de la red
             double similitud = 100 - learner.Error * 1000;
-
-            //Prueba
-            foreach (BasicMLDataPair pair in dataset)
-            {
-                IMLData result = network.Compute(pair.Input);
-
-                double error = result[0] + result[1] + result[2] + result[3] + result[4] + result[5] + result[6] + result[7] + result[8] + result[9] + result[10] + result[11] + result[12] + result[13] + result[14] + result[15] + result[16] + result[17] + result[18] + result[19] + result[20] + result[21] + result[22] + result[23] + result[24] + result[25] + result[26] + result[27] + result[28] + result[29];
-                error = error / 30;
-                Console.WriteLine("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}{13}{14}{15}{16}{17}{18}{19}{20}{21}{22}{23}{24}{25}{26}{27}{28}{29} = {30}{31}{32}{33}{34}{35}{36}{37}{38}{39}{40}{41}{42}{43}{44}{45}{46}{47}{48}{49}{50}{51}{52}{53}{54}{55}{56}{57}{58}{59} -> {60}", pair.Input[0], pair.Input[1], pair.Input[2], pair.Input[3], pair.Input[4], pair.Input[5], pair.Input[6], pair.Input[7], pair.Input[8], pair.Input[9], pair.Input[10], pair.Input[11], pair.Input[12], pair.Input[13], pair.Input[14], pair.Input[15], pair.Input[16], pair.Input[17], pair.Input[18], pair.Input[19], pair.Ideal[20], pair.Input[21], pair.Input[22], pair.Input[23], pair.Input[24], pair.Input[25], pair.Input[26], pair.Input[27], pair.Input[28], pair.Input[29], pair.Ideal[0], pair.Ideal[1], pair.Ideal[2], pair.Ideal[3], pair.Ideal[4], pair.Ideal[5], pair.Ideal[6], pair.Ideal[7], pair.Ideal[8], pair.Ideal[9], pair.Ideal[10], pair.Ideal[11], pair.Ideal[12], pair.Ideal[13], pair.Ideal[14], pair.Ideal[15], pair.Ideal[16], pair.Ideal[17], pair.Ideal[18], pair.Ideal[19], pair.Ideal[20], pair.Ideal[21], pair.Ideal[22], pair.Ideal[23], pair.Ideal[24], pair.Ideal[25], pair.Ideal[26], pair.Ideal[27], pair.Ideal[28], pair.Ideal[29], error);
-            }
-
-            Console.WriteLine("Similitud de la letra = " + similitud);
             return similitud;
         }
         #endregion
 
-        #region Método: Crear y Entrenar Red Neuronal
-        //En este método se crea y entrena la red neuronal para cada letra
-        //Se debe ingresar el arreglo de dataBase e Ideal para la letra
-        //La direccion de la carpeta con las imagenes de entrenamiento
-        //Numero de imagenes de entrenamiento
-        public static BasicNetwork neuronaCreacionEntrenamiento(double[,] arregloDataBase,double[,] arregloIdeal, string pathDataBase, int numeroDeDataBase)
-        {
-            //Declar la neurona
-            BasicNetwork neuronaLetra = new BasicNetwork();
-            neuronaLetra.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 30)); //30 neuronas de entrada
-            neuronaLetra.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 25)); //5 neuronas ocultas
-            neuronaLetra.AddLayer(new BasicLayer(new ActivationSigmoid(), true, 30)); //1 neurona de salida
-            neuronaLetra.Structure.FinalizeStructure();
-            neuronaLetra.Reset();
-
-            //Registro de la información (en bits) de la letra ideal para la comparacion
-            double[][] dataIdeal = matrizCaracteres.creacionDataSet(arregloIdeal);
-            
-            //Entrenamiento de la neurona
-            //Se ingresaran las n imagenes contenidas en la carpeta de database de cada letra
-            //para entrenar a la neurona con ellas
-            for (int i = 1; i <= numeroDeDataBase; i++)
-            {
-                arregloDataBase = matrizCaracteres.lecturaDataBase(pathDataBase, 1);
-                double[][] dataInput = matrizCaracteres.creacionDataSet(arregloDataBase);
-                IMLDataSet dataset = new BasicMLDataSet(dataInput, dataIdeal);
-                ITrain learner = new Backpropagation(neuronaLetra, dataset);
-
-                for (int ii = 0; ii < 3000; ii++)
-                {
-                    learner.Iteration();
-                    Console.WriteLine("error: " + learner.Error);
-                }
-            }
-            return neuronaLetra;
-        }
-        #endregion
     }
 }

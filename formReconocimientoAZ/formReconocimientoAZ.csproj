@@ -60,6 +60,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="matrizCaracteres.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -94,6 +95,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Reconocimiento de caracteres\PruebasBitMap.csproj">
+      <Project>{6c0e1318-abbd-44c7-bfb9-5ad75e4f9eab}</Project>
+      <Name>PruebasBitMap</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

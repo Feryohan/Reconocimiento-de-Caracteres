@@ -10,3 +10,6 @@ C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\P
 C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\obj\Debug\formReconocimientoAZ.pdb
 C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\bin\Debug\encog-core-cs.dll
 C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\obj\Debug\formReconocimientoAZ.csproj.CopyComplete
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\bin\Debug\Reconocimiento de caracteres.exe
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\bin\Debug\Reconocimiento de caracteres.pdb
+C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\formReconocimientoAZ\bin\Debug\Reconocimiento de caracteres.exe.config

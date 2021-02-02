@@ -27,7 +27,7 @@ namespace Reconocimiento_de_caracteres
             matrizCaracteres letrasIdeal = new matrizCaracteres();
             //Objeto para leer las letras del dataBase 
             matrizCaracteres letrasDataBase = new matrizCaracteres();
-
+            matrizCaracteres letrasUsuario = new matrizCaracteres();
 
             #region Lectura y registro de las letras ideales 
             //Lectura de las letras ideales
@@ -119,74 +119,77 @@ namespace Reconocimiento_de_caracteres
             #endregion
 
 
-            #region Lectura de las letras DataBase
-            //Lectura letras B
-            for (int i = 1; i <= letrasDataBase.bNumero; i++)
-            {
-                letrasDataBase.bMatriz = matrizCaracteres.lecturaDataBase(letrasDataBase.bDireccion, i);
-            }
-            #endregion
-            
-            letrasDataBase.similitudConLetraA = matrizCaracteres.redNeuronal(letrasIdeal.aMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraB = matrizCaracteres.redNeuronal(letrasDataBase.bMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraC = matrizCaracteres.redNeuronal(letrasIdeal.cMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraD = matrizCaracteres.redNeuronal(letrasIdeal.dMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraE = matrizCaracteres.redNeuronal(letrasIdeal.eMatriz, letrasIdeal.bMatriz);
+            /*   #region Lectura de las letras DataBase
+               //Lectura letras B
+               for (int i = 1; i <= letrasDataBase.bNumero-1; i++)
+               {
+                   letrasDataBase.bMatriz = matrizCaracteres.lecturaDataBase(letrasDataBase.bDireccion, i);
+               }
+               #endregion
+            */
 
-            letrasDataBase.similitudConLetraF = matrizCaracteres.redNeuronal(letrasIdeal.fMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraG = matrizCaracteres.redNeuronal(letrasIdeal.gMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraH = matrizCaracteres.redNeuronal(letrasIdeal.hMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraI = matrizCaracteres.redNeuronal(letrasIdeal.iMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraJ = matrizCaracteres.redNeuronal(letrasIdeal.jMatriz, letrasIdeal.bMatriz);
+            string direccion = @"C:\Users\SERGIO ROMO\Documents\Semestre 2021-1\Temas Selectos de Programación\PROYECTO Redes Neuronales\LetrasUsuario\ImagenUsuariobitMap.png";
+            letrasUsuario.aMatriz = matrizCaracteres.lecturaDataUsuario(direccion);
+            letrasUsuario.similitudConLetraA = matrizCaracteres.redNeuronal(letrasIdeal.aMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraB = matrizCaracteres.redNeuronal(letrasIdeal.bMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraC = matrizCaracteres.redNeuronal(letrasIdeal.cMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraD = matrizCaracteres.redNeuronal(letrasIdeal.dMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraE = matrizCaracteres.redNeuronal(letrasIdeal.eMatriz, letrasUsuario.aMatriz);
 
-            letrasDataBase.similitudConLetraK = matrizCaracteres.redNeuronal(letrasIdeal.kMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraL = matrizCaracteres.redNeuronal(letrasIdeal.lMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraM = matrizCaracteres.redNeuronal(letrasIdeal.mMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraN = matrizCaracteres.redNeuronal(letrasIdeal.nMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraO = matrizCaracteres.redNeuronal(letrasIdeal.oMatriz, letrasIdeal.bMatriz);
+            letrasUsuario.similitudConLetraF = matrizCaracteres.redNeuronal(letrasIdeal.fMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraG = matrizCaracteres.redNeuronal(letrasIdeal.gMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraH = matrizCaracteres.redNeuronal(letrasIdeal.hMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraI = matrizCaracteres.redNeuronal(letrasIdeal.iMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraJ = matrizCaracteres.redNeuronal(letrasIdeal.jMatriz, letrasUsuario.aMatriz);
 
-            letrasDataBase.similitudConLetraP = matrizCaracteres.redNeuronal(letrasIdeal.pMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraQ = matrizCaracteres.redNeuronal(letrasIdeal.qMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraR = matrizCaracteres.redNeuronal(letrasIdeal.rMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraS = matrizCaracteres.redNeuronal(letrasIdeal.sMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraT = matrizCaracteres.redNeuronal(letrasIdeal.tMatriz, letrasIdeal.bMatriz);
+            letrasUsuario.similitudConLetraK = matrizCaracteres.redNeuronal(letrasIdeal.kMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraL = matrizCaracteres.redNeuronal(letrasIdeal.lMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraM = matrizCaracteres.redNeuronal(letrasIdeal.mMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraN = matrizCaracteres.redNeuronal(letrasIdeal.nMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraO = matrizCaracteres.redNeuronal(letrasIdeal.oMatriz, letrasUsuario.aMatriz);
 
-            letrasDataBase.similitudConLetraU = matrizCaracteres.redNeuronal(letrasIdeal.uMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraV = matrizCaracteres.redNeuronal(letrasIdeal.vMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraW = matrizCaracteres.redNeuronal(letrasIdeal.wMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraX = matrizCaracteres.redNeuronal(letrasIdeal.xMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraY = matrizCaracteres.redNeuronal(letrasIdeal.yMatriz, letrasIdeal.bMatriz);
-            letrasDataBase.similitudConLetraZ = matrizCaracteres.redNeuronal(letrasIdeal.zMatriz, letrasIdeal.bMatriz);
+            letrasUsuario.similitudConLetraP = matrizCaracteres.redNeuronal(letrasIdeal.pMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraQ = matrizCaracteres.redNeuronal(letrasIdeal.qMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraR = matrizCaracteres.redNeuronal(letrasIdeal.rMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraS = matrizCaracteres.redNeuronal(letrasIdeal.sMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraT = matrizCaracteres.redNeuronal(letrasIdeal.tMatriz, letrasUsuario.aMatriz);
+
+            letrasUsuario.similitudConLetraU = matrizCaracteres.redNeuronal(letrasIdeal.uMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraV = matrizCaracteres.redNeuronal(letrasIdeal.vMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraW = matrizCaracteres.redNeuronal(letrasIdeal.wMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraX = matrizCaracteres.redNeuronal(letrasIdeal.xMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraY = matrizCaracteres.redNeuronal(letrasIdeal.yMatriz, letrasUsuario.aMatriz);
+            letrasUsuario.similitudConLetraZ = matrizCaracteres.redNeuronal(letrasIdeal.zMatriz, letrasUsuario.aMatriz);
 
 
            List<Letras> listaLetras = new List<Letras>()
             {
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraA, letra = "A" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraB, letra = "B" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraC, letra = "C" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraD, letra = "D" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraE, letra = "E" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraF, letra = "F" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraG, letra = "G" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraH, letra = "H" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraI, letra = "I" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraJ, letra = "J" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraK, letra = "K" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraL, letra = "L" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraM, letra = "M" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraN, letra = "N" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraO, letra = "O" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraP, letra = "P" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraQ, letra = "Q" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraR, letra = "R" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraS, letra = "S" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraT, letra = "T" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraU, letra = "U" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraV, letra = "V" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraW, letra = "W" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraX, letra = "X" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraY, letra = "Y" },
-                new Letras() { coincidenciaConLetra = letrasDataBase.similitudConLetraZ, letra = "Z" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraA, letra = "A" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraB, letra = "B" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraC, letra = "C" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraD, letra = "D" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraE, letra = "E" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraF, letra = "F" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraG, letra = "G" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraH, letra = "H" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraI, letra = "I" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraJ, letra = "J" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraK, letra = "K" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraL, letra = "L" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraM, letra = "M" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraN, letra = "N" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraO, letra = "O" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraP, letra = "P" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraQ, letra = "Q" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraR, letra = "R" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraS, letra = "S" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraT, letra = "T" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraU, letra = "U" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraV, letra = "V" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraW, letra = "W" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraX, letra = "X" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraY, letra = "Y" },
+                new Letras() { coincidenciaConLetra = letrasUsuario.similitudConLetraZ, letra = "Z" },
             };
             
             List<Letras> letrasOrdenadas = listaLetras.OrderByDescending(numero => numero.coincidenciaConLetra).ToList();
@@ -194,7 +197,14 @@ namespace Reconocimiento_de_caracteres
             {
                 Console.WriteLine(numero.coincidenciaConLetra + " Letra " + numero.letra);
             }
+            
 
+         /*   BasicNetwork neuronaLetraA = matrizCaracteres.neuronaCreacionEntrenamiento(letrasDataBase.aMatriz, letrasIdeal.aMatriz, letrasDataBase.aDireccion, letrasDataBase.aNumero);
+            var sw = new BasicMLData(30);
+            IMLData nxs = neuronaLetraA.Compute(sw);
+
+            Console.WriteLine(Convert.ToString(nxs[0]));
+         */
             Console.ReadLine();
 
         }
